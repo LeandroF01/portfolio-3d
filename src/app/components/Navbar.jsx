@@ -38,13 +38,14 @@ export const Navbar = () => {
 			<img src="" alt="" />
 			<ul className="mx-auto flex gap-4">
 				{LINKS.map(({ label, route }) => (
-					<li
-						key={route}
-						className="cursor-pointer relative rounded-md px-3 py-1  hover:bg-presentation-dark-landing hover:ring-1 ring-fuchsia-400/60">
+					<li key={route} className="cursor-pointer relative px-3 py-1">
 						<Link href={route}>{label}</Link>
 					</li>
 				))}
 			</ul>
+			<button className="cursor-pointer rounded-md px-3 py-1 bg-presentation-dark-landing ring-1 ring-fuchsia-400/60">
+				Dowload CV
+			</button>
 		</nav>
 	);
 };
