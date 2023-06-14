@@ -26,3 +26,51 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+
+.animate-textKA span {
+  animation-name: textKA;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+  animation-iteration-count:initial;
+  opacity: 0;
+}
+
+@keyframes textKA {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+    position: absolute;
+   
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-100px);
+   
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(-80px);
+   
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-40px);
+   
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(-10px);
+   
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

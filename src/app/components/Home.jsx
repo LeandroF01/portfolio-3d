@@ -2,12 +2,41 @@ import React from "react";
 import ComputersCanvas from "./Computer";
 
 export const Home = () => {
+	const text1 = "Hello, I'm Leandro Farias";
+	const letter1 = text1.split("");
+	const text2 = "Front-End Developer";
+	const letter2 = text2.split("");
+
+	const delayIncrement = 0.1;
+	const letter2Delay = letter1.length * delayIncrement;
 	return (
-		<section id="">
-			<h1>Leandro Farias</h1>
-			<div className="w-full h-auto">
-				<ComputersCanvas />
-			</div>
+		<section
+			id=""
+			className="flex justify-center align-middle flex-col w-full h-screen ">
+			<h1 className="h-4 relative animate-textKA font-poppins dark:text-white text-pro-w-black font-bold md:text-[64px] md:leading-[70px] text-[40px] leading-[46px] tracking-[-0.5%] text-center mt-[50px]">
+				{letter1.map((letter, index) => (
+					<span
+						key={index}
+						style={{
+							animationDelay: `${index * delayIncrement}s`,
+						}}>
+						{letter}
+					</span>
+				))}
+
+				<br />
+
+				{letter2.map((letter, index) => (
+					<span
+						key={index}
+						style={{
+							animationDelay: `${letter2Delay + index * delayIncrement}s`,
+						}}
+						className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
+						{letter}
+					</span>
+				))}
+			</h1>
 		</section>
 	);
 };
