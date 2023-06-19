@@ -9,13 +9,18 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+				"hexagon-ex": "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
+				"border-gradiant":
+					"radial-gradient(circle, rgba(46,127,222,1) 0%, rgba(148,187,233,0.372233893557423) 100%)",
 				"gradient-conic":
 					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+				"box-matriz":
+					"radial-gradient(109.99% 253.12% at 76.68% 66.67%, #602EA6 0%, #C977D6 100%)",
 				"presentation-dark-landing":
 					"linear-gradient(180deg, rgba(254, 200, 241, 0.045) -22.92%, rgba(237, 146, 215, 0) 26.73%), radial-gradient(116.32% 95.63% at 76.68% 66.67%, rgba(96, 46, 166, 0) 0%, rgba(201, 119, 214, 0.3) 100%)",
 			},
 			colors: {
+				"text-parraf": "rgba(255, 255, 255, 0.7)",
 				"label-dark-primary": "rgba(255,255,255,1)",
 				"label-dark-secondary": "rgba(255,255,255,0.600)",
 				"label-dark-accent-1": "rgba(255,255,255,1)",
@@ -25,6 +30,11 @@ module.exports = {
 			borderImage: {
 				"gradient-border":
 					"linear-gradient(var(--quick-links-hover-bg, #f0f9ff), var(--quick-links-hover-bg, #f0f9ff)) padding-box, linear-gradient(to top, #818cf8, #22d3ee, #0ea5e9) border-box",
+			},
+			boxShadow: {
+				"shadow-matriz": "0px 0px 30px #763DB0",
+				"transparent-shadow":
+					"rgba(0, 0, 0, 0.25) 0px 40px 80px, rgba(255, 255, 255, 0.15) 0px 0px 0px 0.5px inset",
 			},
 		},
 	},
