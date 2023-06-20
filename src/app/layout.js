@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar.jsx";
 import { Home } from "./components/Home.jsx";
 import { About } from "./components/About.jsx";
 import { Experience } from "./components/Experience.jsx";
+import { Skills } from "./components/Skills.jsx";
 
 import "./globals.css";
 
@@ -14,7 +15,7 @@ export default function RootLayout({ children }) {
 			<body>
 				<header>
 					<Navbar />
-					<Experience />
+					<Skills />
 				</header>
 				{children}
 			</body>
