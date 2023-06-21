@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import Lottie from "lottie-react";
+import contact from "../../json/animation-contact.json";
 
 export const Contact = () => {
 	return (
@@ -40,7 +43,7 @@ export const Contact = () => {
 				</div>
 				<div>
 					<label className="block text-sm font-medium leading-6 text-white">
-						Email address
+						Message
 					</label>
 					<div className="mt-2">
 						<textarea
@@ -58,6 +61,9 @@ export const Contact = () => {
 					</button>
 				</div>
 			</form>
+			<div className="w-80">
+				<Lottie animationData={contact} />
+			</div>
 		</section>
 	);
 };
