@@ -5,12 +5,12 @@ import contact from "../../json/animation-contact.json";
 
 export const Contact = () => {
 	return (
-		<section className="flex justify-center ">
+		<section className="flex justify-center gap-1">
 			<form
-				className="flex-col bg-form  w-80 h-auto px-6 py-12 space-y-6 overflow-hidden"
+				className="flex-col bg-form  w-80 h-auto px-6 py-12 space-y-6 overflow-hidden rounded-tr-[40px]"
 				action="#"
 				method="POST">
-				<div className="line-shine w-full"></div>
+				<div className="line-shine w-full top-0"></div>
 				<div>
 					<div className="flex items-center justify-between">
 						<label className="block text-sm font-medium leading-6 text-white">
@@ -56,12 +56,13 @@ export const Contact = () => {
 				<div>
 					<button
 						type="submit"
-						className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+						className="flex w-full justify-center rounded-md bg-gray-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
 						Sign in
 					</button>
 				</div>
 			</form>
-			<div className="w-80">
+			<div className="bg-animation w-80  rounded-bl-[40px] relative overflow-hidden">
+				<div className="line-shine w-full bottom-0"></div>
 				<Lottie animationData={contact} />
 			</div>
 		</section>
