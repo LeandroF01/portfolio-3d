@@ -25,6 +25,7 @@
 
 input, textarea{
   outline: none ;
+  padding-left: 8px;
 }
 
 body {

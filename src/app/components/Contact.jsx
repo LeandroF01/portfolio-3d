@@ -23,7 +23,7 @@ export const Contact = () => {
 							name="Name"
 							type="Name"
 							required
-							className="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+							className="block w-full rounded-md border-0 py-1.5  text-slate-800  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-slate-800  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
 						/>
 					</div>
 				</div>
@@ -37,7 +37,7 @@ export const Contact = () => {
 							name="email"
 							type="email"
 							required
-							className="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+							className="block w-full rounded-md border-0 py-1.5  text-slate-800 font-mono  shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-slate-800  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
 						/>
 					</div>
 				</div>
@@ -48,7 +48,7 @@ export const Contact = () => {
 					<div className="mt-2">
 						<textarea
 							required
-							className="block w-full rounded-md border-0 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+							className="block w-full rounded-md text-slate-800 border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-slate-800  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
 						/>
 					</div>
 				</div>
