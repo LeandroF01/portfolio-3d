@@ -17,9 +17,7 @@ export default function Projects() {
 					</ul>
 				</div>
 				<section className="flex justify-center flex-col bg-animation top-32 absolute w-full rounded-2xl overflow-hidden">
-					<h3 className="text-center p-2 font-bold ">
-						Lorem ipsum dolor sit amet
-					</h3>
+					<h3 className="text-center p-2 font-">Lorem ipsum dolor sit amet</h3>
 					<div className="w-72 mx-auto h-[1px] bg-slate-300">
 						<div className="line-shine"></div>
 					</div>
