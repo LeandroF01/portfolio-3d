@@ -158,3 +158,22 @@ background: rgba(31, 31, 71, 0.6);
 		transform: translateX(200%);
 	}
 }
+
+
+.bg-text{
+background-image: linear-gradient(136.97deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 111.11%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.bg-links{
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 48.05%, rgba(0, 0, 0, 0.2) 48.9%), linear-gradient(180deg, rgba(49, 58, 91, 0) -19.57%, #313A5B 98.8%, rgba(49, 58, 91, 0.222222) 130.43%);
+filter: drop-shadow(0px 14px 20px rgba(42, 51, 83, 0.8));
+}
+
+.bg-icons{
+	box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+	background: rgba(255, 255, 255, 0.467);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+}
