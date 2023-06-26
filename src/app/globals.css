@@ -177,3 +177,21 @@ filter: drop-shadow(0px 14px 20px rgba(42, 51, 83, 0.8));
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 }
+
+
+
+.animate-tec  {
+	animation: li .5s alternate ease-in .5s forwards;
+	opacity: 0;
+}
+
+@keyframes li {
+	0% {
+		opacity: 0;
+		transform: translateY(180%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
