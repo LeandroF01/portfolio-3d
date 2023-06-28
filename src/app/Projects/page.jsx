@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import aaa from "../../assets/AAA.png";
 
 import { Github } from "../components/icons/Github.jsx";
 import { NetLink } from "../components/icons/NetLink.jsx";
@@ -35,7 +36,12 @@ export default function Projects() {
 	return (
 		<section className="flex justify-center w-full">
 			<article className="w-80 h-auto bg-red-600 rounded-2xl relative">
-				<div className="w-full h-40 bg-blue-500 rounded-2xl"></div>
+				<div className="w-full h-40 bg-blue-500 rounded-2xl overflow-hidden">
+					<Image
+						src={aaa}
+						className="transform hover:scale-110 transition duration-300"
+					/>
+				</div>
 				<div className="absolute bottom-1/2 right-1/3 ">{animationTech()}</div>
 				<section
 					onMouseOver={moveDiv}
