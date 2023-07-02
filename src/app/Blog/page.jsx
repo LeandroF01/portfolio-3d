@@ -1,31 +1,42 @@
 import Link from "next/link";
 import React from "react";
-import { getAllFilesFrontMatter } from "./mdx.js";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
-export default function Blog({ posts }) {
-	console.log(posts);
-	if (!Array.isArray(posts)) {
-		return null;
-	}
+// eslint-disable-next-line react/prop-types
+export default function Blog() {
+	const root = process.cwd();
+	const dataPath = path.join(root, "src", "app", "data");
+	const files = fs.readdirSync(dataPath);
+	const blogs = files.map((filename) => {
+		const filePath = path.join(dataPath, filename);
+		const fileContent = fs.readFileSync(filePath, "utf-8");
+		const { data: frontMatter } = matter(fileContent);
+		return {
+			meta: frontMatter,
+			slug: filename.replace(".mdx", ""),
+		};
+	});
 
 	return (
-		<div>
-			{posts.map((post) => (
-				<Link key={post.slug} href={`/${post.slug}`}>
-					<a href="">
-						<h2>{post.title}</h2>
-						<h2>{post.date}</h2>
-					</a>
-				</Link>
-			))}
-		</div>
+		<section>
+			<h2>sadsa</h2>
+			<div>
+				{blogs.map((post) => (
+					<Link key={post.slug} href={`/${post.slug}`}>
+						<h2>{post.meta.title}</h2>
+						<h2>{post.meta.date}</h2>
+					</Link>
+				))}
+			</div>
+		</section>
 	);
 }
+// export async function getStaticProps() {
+// 	const posts = await getAllFilesFrontMatter("posts");
 
-export async function getStaticProps() {
-	const posts = await getAllFilesFrontMatter("posts");
-
-	return {
-		props: { posts },
-	};
-}
+// 	return {
+// 		props: { posts },
+// 	};
+// }

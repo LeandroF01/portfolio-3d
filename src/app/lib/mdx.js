@@ -6,11 +6,11 @@ import { serialize } from "next-mdx-remote/serialize";
 // eslint-disable-next-line no-undef
 const root = process.cwd();
 
-export const getFiles = async () => fs.readdirSync(path.join(root, "blogs"));
+export const getFiles = async () => fs.readdirSync(path.join(root, "data"));
 
 export const getFileBySlug = async ({ slug }) => {
 	const mdxSource = fs.readFileSync(
-		path.join(root, "blogs", `${slug}.mdx`),
+		path.join(root, "data", `${slug}.mdx`),
 		"utf8"
 	);
 
@@ -28,11 +28,11 @@ export const getFileBySlug = async ({ slug }) => {
 };
 
 export const getAllFilesFrontMatter = async () => {
-	const files = fs.readdirSync(path.join(root, "blogs"));
+	const files = fs.readdirSync(path.join(root, "data"));
 
 	return files.reduce((allPosts, postSlug) => {
 		const mdxSource = fs.readFileSync(
-			path.join(root, "blogs", `${postSlug}.mdx`),
+			path.join(root, "data", `${postSlug}.mdx`),
 			"utf8"
 		);
 		const { data } = matter(mdxSource);
