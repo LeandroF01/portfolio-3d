@@ -4,6 +4,14 @@ const nextConfig = {
 		appDir: true,
 	},
 	reactStrictMode: true,
+	async rewrites() {
+		return [
+			{
+				source: "/Blog/:slug",
+				destination: "/Blog/page",
+			},
+		];
+	},
 };
 
 module.exports = nextConfig;

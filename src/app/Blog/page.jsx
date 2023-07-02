@@ -7,7 +7,7 @@ import matter from "gray-matter";
 // eslint-disable-next-line react/prop-types
 export default function Blog() {
 	const root = process.cwd();
-	const dataPath = path.join(root, "src", "app", "data");
+	const dataPath = path.join(root, "src", "data");
 	const files = fs.readdirSync(dataPath);
 	const blogs = files.map((filename) => {
 		const filePath = path.join(dataPath, filename);
@@ -24,7 +24,7 @@ export default function Blog() {
 			<h2>sadsa</h2>
 			<div>
 				{blogs.map((post) => (
-					<Link key={post.slug} href={`/${post.slug}`}>
+					<Link key={post.slug} href={`/Blogs/${post.slug}`}>
 						<h2>{post.meta.title}</h2>
 						<h2>{post.meta.date}</h2>
 					</Link>
