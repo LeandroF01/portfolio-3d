@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import fs from "fs";
 import path from "path";
@@ -27,6 +28,12 @@ export default function Blog() {
 					<Link key={post.slug} href={`/Blogs/${post.slug}`}>
 						<h2>{post.meta.title}</h2>
 						<h2>{post.meta.date}</h2>
+						<Image
+							src={post.meta.image}
+							width={50}
+							height={50}
+							alt="Picture of the author"
+						/>
 					</Link>
 				))}
 			</div>
