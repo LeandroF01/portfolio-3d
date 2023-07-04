@@ -13,13 +13,13 @@ export const About = () => {
 	};
 
 	return (
-		<section id="About" className="flex justify-center w-full h-screen ">
-			<Image
-				className="absolute hero-circle py-auto px-auto"
-				src={animation}
-				width={600}
-				height={600}
-			/>
+		<section
+			id="About"
+			className="flex justify-center w-full h-screen relative">
+			<div className="absolute max-w-2xl top-5">
+				<Image className="hero-circle" src={animation} />
+			</div>
+
 			<article
 				className="my-auto relative"
 				onMouseOver={moveDiv}
