@@ -1,0 +1,50 @@
+[
+    {
+      "name": "JavaScript",
+      "imageURL": "https://example.com/javascript.png"
+    },
+    {
+      "name": "TypeScript",
+      "imageURL": "https://example.com/typescript.png"
+    },
+    {
+      "name": "React.js",
+      "imageURL": "https://example.com/react.png"
+    },
+    {
+      "name": "Astro",
+      "imageURL": "https://example.com/astro.png"
+    },
+    {
+      "name": "HTML",
+      "imageURL": "https://example.com/html.png"
+    },
+    {
+      "name": "CSS",
+      "imageURL": "https://example.com/css.png"
+    },
+    {
+      "name": "Sass",
+      "imageURL": "https://example.com/sass.png"
+    },
+    {
+      "name": "Tailwind",
+      "imageURL": "https://example.com/tailwind.png"
+    },
+    {
+      "name": "Node.js",
+      "imageURL": "https://example.com/nodejs.png"
+    },
+    {
+      "name": "PostgreSQL",
+      "imageURL": "https://example.com/postgresql.png"
+    },
+    {
+      "name": "MySQL",
+      "imageURL": "https://example.com/mysql.png"
+    },
+    {
+      "name": "VB.NET",
+      "imageURL": "https://example.com/vbnet.png"
+    }
+  ]
