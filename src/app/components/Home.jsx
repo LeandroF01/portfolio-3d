@@ -14,10 +14,7 @@ export const Home = () => {
 	const delayIncrement = 0.1;
 	const letter2Delay = letter1.length * delayIncrement;
 	return (
-		<section
-			id=""
-			className="flex justify-center align-middle flex-col w-full h-screen ">
-			<div className=""></div>
+		<section id="" className="flex justify-between flex-col w-full h-screen ">
 			<h1 className="gap-8 h-4 relative animate-textKA font-poppins dark:text-white text-pro-w-black font-bold md:text-[64px] md:leading-[70px] text-[40px] leading-[46px] tracking-[-0.5%] text-center mt-[50px]">
 				{letter1.map((letter, index) => (
 					<span
@@ -43,6 +40,8 @@ export const Home = () => {
 					</span>
 				))}
 			</h1>
+
+			<ComputersCanvas />
 		</section>
 	);
 };
