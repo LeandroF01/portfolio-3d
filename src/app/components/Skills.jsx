@@ -16,7 +16,7 @@ export const Skills = () => {
 	};
 
 	return (
-		<section className="w-full flex justify-center align-middle">
+		<section id="Skills" className="w-full flex justify-center align-middle">
 			<section>
 				<article
 					className=" w-40 h-16 bg-experience relative rounded-md"

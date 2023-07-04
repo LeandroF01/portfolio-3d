@@ -5,7 +5,7 @@ import contact from "../../json/animation-contact.json";
 
 export const Contact = () => {
 	return (
-		<section className="flex justify-center gap-1">
+		<section id="Contact" className="flex justify-center gap-1">
 			<form
 				className="flex-col bg-form  w-80 h-auto px-6 py-12 space-y-6 overflow-hidden rounded-tr-[40px]"
 				action="#"

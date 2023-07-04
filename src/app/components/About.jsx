@@ -13,14 +13,17 @@ export const About = () => {
 	};
 
 	return (
-		<section className="flex justify-center w-full h-full">
+		<section id="About" className="flex justify-center w-full h-screen ">
 			<Image
-				className="absolute hero-circle"
+				className="absolute hero-circle py-auto px-auto"
 				src={animation}
 				width={600}
 				height={600}
 			/>
-			<article className="relative" onMouseOver={moveDiv} onMouseOut={moveDiv}>
+			<article
+				className="my-auto relative"
+				onMouseOver={moveDiv}
+				onMouseOut={moveDiv}>
 				<div className="front relative w-[370px] h-[380px] backdrop-blur-[40px] p-[20px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] z-10">
 					<div className="absolute right-5 hexagon w-9 h-9 shadow-shadow-matriz flex justify-center">
 						<Image

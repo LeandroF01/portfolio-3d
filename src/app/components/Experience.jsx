@@ -2,7 +2,9 @@ import React from "react";
 
 export const Experience = () => {
 	return (
-		<section className="flex justify-center align-middle w-full">
+		<section
+			id="Experience"
+			className="flex justify-center align-middle w-full">
 			<h2></h2>
 			<div className="border-l-2 border-dashed ">
 				<article className="w-80 h-52 mx-6 my-4 bg-experience rounded-xl relative ">
