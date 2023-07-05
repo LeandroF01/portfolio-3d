@@ -14,7 +14,7 @@ export const About = () => {
 	return (
 		<section
 			id="About"
-			className="flex justify-center w-full h-screen relative">
+			className="flex justify-center w-full h-screen relative overflow-hidden">
 			<div className="absolute max-w-2xl top-5">
 				<Image className="hero-circle" src={animation} />
 			</div>
