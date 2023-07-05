@@ -1,50 +1,62 @@
 [
-    {
-      "name": "JavaScript",
-      "imageURL": "https://example.com/javascript.png"
-    },
-    {
-      "name": "TypeScript",
-      "imageURL": "https://example.com/typescript.png"
-    },
-    {
-      "name": "React.js",
-      "imageURL": "https://example.com/react.png"
-    },
-    {
-      "name": "Astro",
-      "imageURL": "https://example.com/astro.png"
-    },
-    {
-      "name": "HTML",
-      "imageURL": "https://example.com/html.png"
-    },
-    {
-      "name": "CSS",
-      "imageURL": "https://example.com/css.png"
-    },
-    {
-      "name": "Sass",
-      "imageURL": "https://example.com/sass.png"
-    },
-    {
-      "name": "Tailwind",
-      "imageURL": "https://example.com/tailwind.png"
-    },
-    {
-      "name": "Node.js",
-      "imageURL": "https://example.com/nodejs.png"
-    },
-    {
-      "name": "PostgreSQL",
-      "imageURL": "https://example.com/postgresql.png"
-    },
-    {
-      "name": "MySQL",
-      "imageURL": "https://example.com/mysql.png"
-    },
-    {
-      "name": "VB.NET",
-      "imageURL": "https://example.com/vbnet.png"
-    }
-  ]
+	{
+		"name": "JavaScript",
+		"color": "#EAD41C",
+		"imageURL": "icons/javascript.svg"
+	},
+	{
+		"name": "TypeScript",
+		"color": "#2F72BC",
+		"imageURL": "icons/typescript-icon.svg"
+	},
+	{
+		"name": "React.js",
+		"color": "#05CDF2",
+		"imageURL": "icons/react.svg"
+	},
+	{
+		"name": "Astro",
+		"color": "#FF5D01",
+		"imageURL": "icons/astro-icon.svg"
+	},
+	{
+		"name": "HTML",
+		"color": "#E56027",
+		"imageURL": "icons/html-5.svg"
+	},
+	{
+		"name": "CSS",
+		"color": "#008ED1",
+		"imageURL": "icons/css-3.svg"
+	},
+	{
+		"name": "Sass",
+		"color": "#C26191",
+		"imageURL": "icons/sass.svg"
+	},
+	{
+		"name": "Tailwind",
+		"color": "#07ADCA",
+		"imageURL": "icons/tailwindcss-icon.svg"
+	},
+	{
+		"name": "Node.js",
+		"color": "#76C438",
+		"imageURL": "icons/nodejs-icon.svg"
+	},
+	{
+		"name": "PostgreSQL",
+		"color": "#30628A",
+		"imageURL": "icons/postgresql.svg"
+	},
+	{
+		"name": "MySQL",
+		"color": "#005C83",
+		"imageURL": "icons/mysql.svg"
+	},
+	{
+		"name": "VB.NET",
+		"color": "#631F74",
+		"imageURL": "icons/dotnet.svg"
+	}
+]
