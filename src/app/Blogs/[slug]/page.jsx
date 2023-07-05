@@ -14,8 +14,6 @@ export async function generateStaticParams() {
 		slug: filename.replace(".mdx", ""),
 	}));
 
-	console.log(paths);
-
 	return paths;
 }
 
