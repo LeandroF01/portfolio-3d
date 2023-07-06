@@ -13,11 +13,11 @@ export const Skills = () => {
 		}));
 	};
 
-	const getAnimationClass = (key, position, bg) => {
+	const getAnimationClass = (key, position) => {
 		const isHovered = hoveredElements[key];
 		return isHovered
-			? `absolute ${position}-0 w-20 h-[2px] ${bg} left-10 transition-all`
-			: `hexagon absolute ${position}-0 w-[5px] h-[5px] ${bg} left-20 transition-all`;
+			? `absolute ${position}-0 w-20 h-[2px]  left-10 transition-all`
+			: `hexagon absolute ${position}-0 w-[5px] h-[5px] left-20 transition-all`;
 	};
 
 	return (
@@ -32,11 +32,8 @@ export const Skills = () => {
 						onMouseOver={() => toggleHover(skill.name)}
 						onMouseOut={() => toggleHover(skill.name)}>
 						<div
-							className={getAnimationClass(
-								skill.name,
-								"top",
-								`bg-[${skill.color}]`
-							)}
+							className={getAnimationClass(skill.name, "top")}
+							style={{ background: skill.color }}
 						/>
 						<div className="flex justify-center items-center gap-2">
 							<Image
@@ -50,11 +47,8 @@ export const Skills = () => {
 						</div>
 
 						<div
-							className={getAnimationClass(
-								skill.name,
-								"bottom",
-								`bg-[${skill.color}]`
-							)}
+							className={getAnimationClass(skill.name, "bottom")}
+							style={{ background: skill.color }}
 						/>
 					</article>
 				))}
