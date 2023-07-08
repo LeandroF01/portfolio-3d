@@ -39,6 +39,9 @@ module.exports = {
 			animation: {
 				slideInUp: "slideInUp 1.2s ease-in",
 				scaleOut: "scaleOut 1s ease-out",
+				slideRight: "slideRight 3.2s ease-out",
+				slideLeft: "slideLeft 3.2s ease-out",
+				slideBlur: "slideBlur .5s  ease-in 1s forwards",
 			},
 			keyframes: {
 				slideInUp: {
@@ -50,6 +53,20 @@ module.exports = {
 					"25%": { transform: "scale(.25)" },
 					"50%": { transform: "scale(.5)" },
 					"100%": { transform: "scale(1)" },
+				},
+				slideRight: {
+					"0%": { transform: "translateX(-100%)", opacity: "1" },
+					"100%": { transform: "translateX(0)", opacity: "1" },
+				},
+				slideLeft: {
+					"0%": { transform: "translateX(100%)", opacity: "1" },
+					"100%": { transform: "translateX(0)", opacity: "1" },
+				},
+				slideBlur: {
+					"0%": { filter: "blur(10px)", opacity: "0" },
+					"25%": { filter: "blur(10px)", opacity: "0" },
+					"50%": { filter: "blur(5)", opacity: "1" },
+					"100%": { filter: "blur(0)", opacity: "1" },
 				},
 			},
 		},
