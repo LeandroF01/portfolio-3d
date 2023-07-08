@@ -36,6 +36,22 @@ module.exports = {
 				"transparent-shadow":
 					"rgba(0, 0, 0, 0.25) 0px 40px 80px, rgba(255, 255, 255, 0.15) 0px 0px 0px 0.5px inset",
 			},
+			animation: {
+				slideInUp: "slideInUp 1.2s ease-in",
+				scaleOut: "scaleOut 1s ease-out",
+			},
+			keyframes: {
+				slideInUp: {
+					"0%": { transform: "translateY(-100%)", opacity: "0" },
+					"100%": { transform: "translateY(0)", opacity: "1" },
+				},
+				scaleOut: {
+					"0%": { transform: "scale(0)" },
+					"25%": { transform: "scale(.25)" },
+					"50%": { transform: "scale(.5)" },
+					"100%": { transform: "scale(1)" },
+				},
+			},
 		},
 	},
 	plugins: [],

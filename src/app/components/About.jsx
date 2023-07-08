@@ -3,9 +3,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import user from "../../assets/user.svg";
 import animation from "../../assets/animation-circle.svg";
+import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
 export const About = () => {
 	const [isHovered, setIsHovered] = useState(false);
+
+	const [targetRef, isIntersecting] = useIntersectionObserver({
+		threshold: 0.3, // Define el umbral de intersección (50% visible)
+	});
 
 	const moveDiv = () => {
 		setIsHovered(!isHovered);
@@ -14,13 +19,19 @@ export const About = () => {
 	return (
 		<section
 			id="About"
+			ref={targetRef}
 			className="flex justify-center w-full h-screen relative overflow-hidden">
-			<div className="absolute max-w-2xl top-5">
+			<div
+				className={`absolute max-w-2xl top-5 animate-scaleOut ${
+					isIntersecting ? "visible" : "hidden"
+				}`}>
 				<Image className="hero-circle" src={animation} />
 			</div>
 
 			<article
-				className="my-auto relative"
+				className={`my-auto relative  animate-slideInUp ${
+					isIntersecting ? "visible" : "hidden"
+				}`}
 				onMouseOver={moveDiv}
 				onMouseOut={moveDiv}>
 				<div className="front relative w-[370px] h-[380px] backdrop-blur-[40px] p-[20px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] z-10">
