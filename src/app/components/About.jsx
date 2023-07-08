@@ -54,7 +54,7 @@ export const About = () => {
 						online presence.
 					</p>
 				</div>
-				<div className=""></div>
+
 				<div
 					className={`back absolute w-[350px] h-[380px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] top-0 skew-y-6 translate-y-6 ${
 						isHovered ? "move" : ""
