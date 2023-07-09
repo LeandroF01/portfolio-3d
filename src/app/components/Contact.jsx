@@ -2,11 +2,17 @@
 import React from "react";
 import Lottie from "lottie-react";
 import contact from "../../json/animation-contact.json";
+import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
 export const Contact = () => {
+	const [targetRef, isIntersecting] = useIntersectionObserver({
+		threshold: 0.5, // Define el umbral de intersección (50% visible)
+	});
+
 	return (
 		<section
 			id="Contact"
+			ref={targetRef}
 			className="flex justify-center items-center gap-1 h-screen">
 			<div className="flex min-h-[500px] max-md:flex-col-reverse">
 				<form
@@ -65,7 +71,10 @@ export const Contact = () => {
 						</button>
 					</div>
 				</form>
-				<div className="bg-animation w-80 h-auto  rounded-bl-[40px] relative overflow-hidden max-md:rounded-tr-[40px] max-md:rounded-bl-[0px]">
+				<div
+					className={`bg-animation w-80 h-auto rounded-bl-[40px] relative overflow-hidden max-md:rounded-tr-[40px] max-md:rounded-bl-[0px] animate-slideRight2  ${
+						isIntersecting ? "visible" : "hidden"
+					}`}>
 					<div className="line-shine w-full bottom-0"></div>
 					<Lottie animationData={contact} />
 				</div>

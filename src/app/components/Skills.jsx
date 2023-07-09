@@ -36,9 +36,9 @@ export const Skills = () => {
 				{skills.map((skill, index) => (
 					<article
 						key={skill.name}
-						className={`w-40 h-16 bg-experience relative rounded-md animate-slideBlur opacity-0 ${
+						className={`w-40 h-16 bg-experience relative rounded-md animate-slideBlur opacity-0  ${
 							isIntersecting ? "visible" : "hidden"
-						}`}
+						} `}
 						style={{
 							animationDelay: `${index * delayIncrement}s`,
 						}}
