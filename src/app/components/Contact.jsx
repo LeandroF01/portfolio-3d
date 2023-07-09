@@ -13,7 +13,7 @@ export const Contact = () => {
 		<section
 			id="Contact"
 			ref={targetRef}
-			className="flex justify-center items-center gap-1 h-screen">
+			className="flex justify-center items-center gap-1 h-screen  snap-start">
 			<div className="flex min-h-[500px] max-md:flex-col-reverse">
 				<form
 					className="flex-col bg-form  w-80 h-auto px-6 py-12 space-y-6 overflow-hidden rounded-tr-[40px] max-md:rounded-[0px] max-md:rounded-bl-[40px]"

@@ -31,7 +31,7 @@ export const Skills = () => {
 		<section
 			id="Skills"
 			ref={targetRef}
-			className="w-full h-screen flex justify-center items-center">
+			className="w-full h-screen flex justify-center items-center  snap-start">
 			<section className="max-w-4xl flex justify-center items-center flex-wrap gap-7">
 				{skills.map((skill, index) => (
 					<article

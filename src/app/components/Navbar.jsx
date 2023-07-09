@@ -34,7 +34,7 @@ const LINKS = [
 
 export const Navbar = () => {
 	return (
-		<nav className="mx-auto flex items-center justify-between p-4 lg:px-8">
+		<nav className="fixed flex items-center justify-between w-full p-4 lg:px-8 z-10">
 			<img src="" alt="" />
 			<ul className="mx-auto flex gap-4">
 				{LINKS.map(({ label, route }) => (

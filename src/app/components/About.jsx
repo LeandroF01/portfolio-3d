@@ -20,7 +20,7 @@ export const About = () => {
 		<section
 			id="About"
 			ref={targetRef}
-			className="flex justify-center w-full h-screen relative overflow-hidden">
+			className="flex justify-center w-full h-screen relative overflow-hidden snap-start">
 			<div
 				className={`absolute max-w-2xl top-5 animate-scaleOut ${
 					isIntersecting ? "visible" : "hidden"

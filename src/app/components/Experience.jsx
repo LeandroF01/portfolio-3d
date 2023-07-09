@@ -20,7 +20,7 @@ export const Experience = () => {
 		<section
 			id="Experience"
 			ref={targetRef}
-			className="flex flex-col justify-center items-center w-full h-screen">
+			className="flex flex-col justify-center items-center w-full h-screen snap-start">
 			<h2>Experience</h2>
 			<div
 				className={`border-l-2 border-dashed h-2/3 animate-slideInUp  ${
