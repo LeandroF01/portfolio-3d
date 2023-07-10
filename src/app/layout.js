@@ -6,7 +6,7 @@ import "./globals.css";
 // eslint-disable-next-line react/prop-types
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className="scroll-smooth snap-y snap-mandatory">
+		<html lang="en" className="snap-y snap-mandatory">
 			<head></head>
 			<body>
 				<header>

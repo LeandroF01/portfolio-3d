@@ -18,7 +18,6 @@ export async function generateStaticParams() {
 }
 
 function getPost({ slug }) {
-	console.log(slug);
 	const root = process.cwd();
 	const markdownFile = fs.readFileSync(
 		path.join(root, "src", "data", `${slug}.mdx`),
@@ -26,8 +25,6 @@ function getPost({ slug }) {
 	);
 
 	const { fontMatter, content } = matter(markdownFile);
-
-	console.log(content);
 
 	return {
 		fontMatter,

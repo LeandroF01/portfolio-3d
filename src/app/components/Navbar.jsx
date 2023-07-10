@@ -1,5 +1,6 @@
-import React from "react";
-import Link from "next/Link";
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 const LINKS = [
 	{
@@ -33,18 +34,71 @@ const LINKS = [
 ];
 
 export const Navbar = () => {
+	const [isMenuOpen, setMenuOpen] = useState(false);
+	const [activeSection, setActiveSection] = useState("");
+
+	const toggleMenu = () => {
+		setMenuOpen(!isMenuOpen);
+	};
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollPosition = window.scrollY;
+
+			// Verificar qué sección está visible en el scroll
+			const activeLink = LINKS.find(({ route }) => {
+				const sectionId = route.substring(2); // Eliminar los primeros dos caracteres de la ruta ("/#")
+				const element = document.getElementById(sectionId);
+				console.log(element);
+				if (element) {
+					const offsetTop = element.offsetTop - 100; // Ajusta el valor para compensar el tamaño de la barra de navegación
+					const offsetBottom = offsetTop + element.offsetHeight;
+					return scrollPosition >= offsetTop && scrollPosition < offsetBottom;
+				}
+				return false;
+			});
+
+			if (activeLink) {
+				setActiveSection(activeLink.route);
+			} else {
+				setActiveSection("");
+			}
+		};
+
+		// Agregar el listener para el evento scroll
+		window.addEventListener("scroll", handleScroll);
+
+		// Limpiar el listener cuando el componente se desmonta
+		return () => {
+			window.removeEventListener("scroll", handleScroll());
+		};
+	}, []);
+
+	console.log(activeSection);
+
 	return (
-		<nav className="fixed flex items-center justify-between w-full p-4 lg:px-8 z-10">
+		<nav className="flex items-center justify-between w-full p-4 lg:px-8 z-10 fixed">
 			<img src="" alt="" />
-			<ul className="mx-auto flex gap-4">
+			<button
+				className="lg:hidden cursor-pointer focus:outline-none p-3 bg-gray-50"
+				onClick={toggleMenu}></button>
+			<ul
+				className={`${
+					isMenuOpen ? "block" : "hidden"
+				} lg:flex lg:gap-4 lg:items-center mx-auto`}>
 				{LINKS.map(({ label, route }) => (
-					<li key={route} className="cursor-pointer relative px-3 py-1">
+					<li
+						onClick={toggleMenu}
+						key={route}
+						className={`cursor-pointer relative px-3 py-1 ${
+							activeSection === route ? "text-red-500" : ""
+						}`}>
 						<Link href={route}>{label}</Link>
 					</li>
 				))}
 			</ul>
-			<button className="cursor-pointer rounded-md px-3 py-1 bg-presentation-dark-landing ring-1 ring-fuchsia-400/60">
-				Dowload CV
+			<button className="hidden lg:block cursor-pointer rounded-md px-3 py-1 bg-presentation-dark-landing ring-1 ring-fuchsia-400/60">
+				Download CV
 			</button>
 		</nav>
 	);
