@@ -34,7 +34,7 @@ export default function Projects() {
 		}
 	};
 	return (
-		<section className="flex justify-center w-full">
+		<section id="Projects" className="flex justify-center w-full">
 			<article className="w-80 h-auto bg-red-600 rounded-2xl relative">
 				<div className="w-full h-40 bg-blue-500 rounded-2xl overflow-hidden">
 					<Image

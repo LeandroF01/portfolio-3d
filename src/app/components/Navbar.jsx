@@ -5,7 +5,7 @@ import Link from "next/link";
 const LINKS = [
 	{
 		label: "Home",
-		route: "/#",
+		route: "/#Home",
 	},
 	{
 		label: "About",
@@ -49,7 +49,7 @@ export const Navbar = () => {
 			const activeLink = LINKS.find(({ route }) => {
 				const sectionId = route.substring(2); // Eliminar los primeros dos caracteres de la ruta ("/#")
 				const element = document.getElementById(sectionId);
-				console.log(element);
+
 				if (element) {
 					const offsetTop = element.offsetTop - 100; // Ajusta el valor para compensar el tamaño de la barra de navegación
 					const offsetBottom = offsetTop + element.offsetHeight;
@@ -74,7 +74,9 @@ export const Navbar = () => {
 		};
 	}, []);
 
-	console.log(activeSection);
+	const delayHidden = setTimeout(() => {
+		return "hidden";
+	}, 1000);
 
 	return (
 		<nav className="flex items-center justify-between w-full p-4 lg:px-8 z-10 fixed">
@@ -84,16 +86,24 @@ export const Navbar = () => {
 				onClick={toggleMenu}></button>
 			<ul
 				className={`${
-					isMenuOpen ? "block" : "hidden"
+					isMenuOpen
+						? "menu_container open block"
+						: `menu_container closed ${delayHidden}`
 				} lg:flex lg:gap-4 lg:items-center mx-auto`}>
-				{LINKS.map(({ label, route }) => (
+				{LINKS.map(({ label, route }, index) => (
 					<li
 						onClick={toggleMenu}
 						key={route}
 						className={`cursor-pointer relative px-3 py-1 ${
 							activeSection === route ? "text-red-500" : ""
 						}`}>
-						<Link href={route}>{label}</Link>
+						<Link
+							href={route}
+							style={{
+								animationDelay: `${index * 0.1 + 0.4}s`,
+							}}>
+							{label}
+						</Link>
 					</li>
 				))}
 			</ul>

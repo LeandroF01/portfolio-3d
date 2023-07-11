@@ -37,7 +37,7 @@ export default function Page({ params }) {
 	const { fontMatter, content } = getPost(params);
 
 	return (
-		<article>
+		<article id="Blog">
 			<h2>asdasd</h2>
 
 			<MDXRemote source={content}></MDXRemote>
