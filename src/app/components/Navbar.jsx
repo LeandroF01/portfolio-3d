@@ -82,13 +82,34 @@ export const Navbar = () => {
 		<nav className="flex items-center justify-between w-full p-4 lg:px-8 z-10 fixed">
 			<img src="" alt="" />
 			<button
-				className="lg:hidden cursor-pointer focus:outline-none p-3 bg-gray-50"
-				onClick={toggleMenu}></button>
+				className="lg:hidden cursor-pointer focus:outline-none p-3 bg-red-700"
+				onClick={toggleMenu}>
+				<div className="w-5 h-5 relative bg-gray-950">
+					<span
+						className={`bg-blue-400 w-1/2 h-[2px] rounded block absolute top-1/2 left-1/2origin-[0 0]  ${
+							isMenuOpen
+								? "translate-x-[2.5px] translate-y-[4px] rotate-[-45deg]"
+								: "-translate-x-[0] -translate-y-[8px]"
+						}`}></span>
+					<span
+						className={`bg-white w-full h-[2px] rounded block absolute top-1/2 left-1/2   ${
+							isMenuOpen
+								? "-translate-x-[9px] -translate-y-[0] rotate-[45deg]"
+								: "-translate-x-[50%] -translate-y-[50%]"
+						}`}></span>
+					<span
+						className={`bg-white w-1/2 h-[2px] rounded block absolute top-1/2 left-1/2  origin-[100% 0]  ${
+							isMenuOpen
+								? "-translate-x-[1px] -translate-y-[3px] rotate-[-45deg]"
+								: "translate-x-[0] translate-y-[7px]"
+						}`}></span>
+				</div>
+			</button>
 			<ul
 				className={`${
 					isMenuOpen
-						? "menu_container open block"
-						: `menu_container closed ${delayHidden}`
+						? "lg:menu_container open block"
+						: `lg:menu_container closed ${delayHidden}`
 				} lg:flex lg:gap-4 lg:items-center mx-auto`}>
 				{LINKS.map(({ label, route }, index) => (
 					<li
