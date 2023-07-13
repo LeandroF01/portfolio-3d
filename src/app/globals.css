@@ -180,11 +180,11 @@ filter: drop-shadow(0px 14px 20px rgba(42, 51, 83, 0.8));
 
 
 .animate-tec  {
-	animation: li .5s alternate ease-in .5s forwards;
+	animation: list .5s alternate ease-in .5s forwards;
 	opacity: 0;
 }
 
-@keyframes li {
+@keyframes list {
 	0% {
 		opacity: 0;
 		transform: translateY(180%);
@@ -196,41 +196,3 @@ filter: drop-shadow(0px 14px 20px rgba(42, 51, 83, 0.8));
 }
 
 
-.menu_container.open li a {
-	animation-name: menuFadeIn;
-	animation-duration: 0.5s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
-	opacity: 0;
-  }
-  
-  @keyframes menuFadeIn {
-	0% {
-	  opacity: 0;
-	  transform: translateY(80px);
-	}
-	100% {
-	  opacity: 1;
-	  transform: translateY(0);
-	}
-  }
-  
-  .menu_container.closed li a {
-	animation-name: menuFadeOut;
-	animation-duration: 0.5s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
-	opacity: 0;
-  }
- 
-  
-  @keyframes menuFadeOut {
-	0% {
-	  opacity: 1;
-	  transform: translateY(0);
-	}
-	100% {
-	  opacity: 0;
-	  transform: translateY(90px);
-	}
-  }

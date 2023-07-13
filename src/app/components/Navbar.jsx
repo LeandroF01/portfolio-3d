@@ -74,19 +74,15 @@ export const Navbar = () => {
 		};
 	}, []);
 
-	const delayHidden = setTimeout(() => {
-		return "hidden";
-	}, 1000);
-
 	return (
 		<nav className="flex items-center justify-between w-full p-4 lg:px-8 z-10 fixed">
 			<img src="" alt="" />
 			<button
-				className="lg:hidden cursor-pointer focus:outline-none p-3 bg-red-700"
+				className="absolute top-1 right-1 lg:hidden cursor-pointer focus:outline-none p-3"
 				onClick={toggleMenu}>
-				<div className="w-5 h-5 relative bg-gray-950">
+				<div className="w-5 h-5 relative">
 					<span
-						className={`bg-blue-400 w-1/2 h-[2px] rounded block absolute top-1/2 left-1/2origin-[0 0]  ${
+						className={`bg-white w-1/2 h-[2px] rounded block absolute top-1/2 left-1/2origin-[0 0]  ${
 							isMenuOpen
 								? "translate-x-[2.5px] translate-y-[4px] rotate-[-45deg]"
 								: "-translate-x-[0] -translate-y-[8px]"
@@ -105,12 +101,7 @@ export const Navbar = () => {
 						}`}></span>
 				</div>
 			</button>
-			<ul
-				className={`${
-					isMenuOpen
-						? "lg:menu_container open block"
-						: `lg:menu_container closed ${delayHidden}`
-				} lg:flex lg:gap-4 lg:items-center mx-auto`}>
+			<ul className="lg:flex lg:gap-4 lg:items-center mx-auto text-white ">
 				{LINKS.map(({ label, route }, index) => (
 					<li
 						onClick={toggleMenu}
@@ -119,6 +110,11 @@ export const Navbar = () => {
 							activeSection === route ? "text-red-500" : ""
 						}`}>
 						<Link
+							className={` ${
+								isMenuOpen
+									? "opacity-0 animate-menuFadeIn"
+									: "delay-1000 animate-menuFadeOut max-lg:hidden"
+							}`}
 							href={route}
 							style={{
 								animationDelay: `${index * 0.1 + 0.4}s`,

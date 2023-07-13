@@ -43,6 +43,8 @@ module.exports = {
 				slideLeft: "slideLeft 3.2s ease-out",
 				slideBlur: "slideBlur .5s  ease-in 1s forwards",
 				slideRight2: "slideRight 3.2s ease-in",
+				menuFadeIn: "menuFadeIn 0.5s forwards ease-in-out",
+				menuFadeOut: "menuFadeIn 0.5s forwards ease-in-out",
 			},
 			keyframes: {
 				slideInUp: {
@@ -72,6 +74,26 @@ module.exports = {
 				slideRight2: {
 					"0%": { transform: "translateX(-50%)", opacity: "1" },
 					"100%": { transform: "translateX(0)", opacity: "1" },
+				},
+				menuFadeIn: {
+					"0%": {
+						opacity: "0",
+						transform: "translateY(80px)",
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translateY(0)",
+					},
+				},
+				menuFadeOut: {
+					"0%": {
+						opacity: "1",
+						transform: "translateY(0px)",
+					},
+					"100%": {
+						opacity: "0",
+						transform: "translateY(90px)",
+					},
 				},
 			},
 		},
