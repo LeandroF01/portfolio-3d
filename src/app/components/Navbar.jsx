@@ -78,7 +78,7 @@ export const Navbar = () => {
 		<nav className="flex items-center justify-between w-full p-4 lg:px-8 z-10 fixed">
 			<img src="" alt="" />
 			<button
-				className="absolute top-1 right-1 lg:hidden cursor-pointer focus:outline-none p-3"
+				className="absolute top-1 right-1 lg:hidden cursor-pointer focus:outline-none p-3 z-10"
 				onClick={toggleMenu}>
 				<div className="w-5 h-5 relative">
 					<span
@@ -102,11 +102,17 @@ export const Navbar = () => {
 				</div>
 			</button>
 			<ul className="lg:flex lg:gap-4 lg:items-center mx-auto text-white ">
+				<div
+					className={`${
+						isMenuOpen
+							? "max-lg:circle max-lg:absolute max-lg:top-[-40px] max-lg:right-[-40px] max-lg:w-[70px] max-lg:h-[70px] max-lg:rounded-bl-full max-lg:bg-red-500 max-lg:animate-circleAnimation max-lg:overflow-hidden  z-0"
+							: ""
+					}`}></div>
 				{LINKS.map(({ label, route }, index) => (
 					<li
 						onClick={toggleMenu}
 						key={route}
-						className={`cursor-pointer relative px-3 py-1 ${
+						className={`cursor-pointer relative px-3 py-1 z-10 ${
 							activeSection === route ? "text-red-500" : ""
 						}`}>
 						<Link

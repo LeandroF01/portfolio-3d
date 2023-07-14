@@ -34,7 +34,7 @@ export const About = () => {
 				}`}
 				onMouseOver={moveDiv}
 				onMouseOut={moveDiv}>
-				<div className="front relative w-[370px] h-[380px] backdrop-blur-[40px] p-[20px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] z-10">
+				<div className="front relative w-[370px] h-[380px] backdrop-blur-[40px] p-[20px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] z-[1]">
 					<div className="absolute right-5 hexagon w-9 h-9 shadow-shadow-matriz flex justify-center">
 						<Image
 							src={user}

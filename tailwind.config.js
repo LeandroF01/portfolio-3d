@@ -45,6 +45,7 @@ module.exports = {
 				slideRight2: "slideRight 3.2s ease-in",
 				menuFadeIn: "menuFadeIn 0.5s forwards ease-in-out",
 				menuFadeOut: "menuFadeIn 0.5s forwards ease-in-out",
+				circleAnimation: "circleAnimation 1.2s  forwards ease-in-out",
 			},
 			keyframes: {
 				slideInUp: {
@@ -93,6 +94,16 @@ module.exports = {
 					"100%": {
 						opacity: "0",
 						transform: "translateY(90px)",
+					},
+				},
+				circleAnimation: {
+					"0%": {
+						transform: "scale(0)",
+					},
+					"100%": {
+						transform: "scale(10)",
+						width: "100vw",
+						height: " 100vh",
 					},
 				},
 			},
