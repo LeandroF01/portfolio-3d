@@ -38,6 +38,7 @@ module.exports = {
 			},
 			animation: {
 				slideInUp: "slideInUp 1.2s ease-in",
+				slideInDown: "slideInDown 1.2s ease-out",
 				scaleOut: "scaleOut 1s ease-out",
 				slideRight: "slideRight 3.2s ease-out",
 				slideLeft: "slideLeft 3.2s ease-out",
@@ -46,10 +47,15 @@ module.exports = {
 				menuFadeIn: "menuFadeIn 0.5s forwards ease-in-out",
 				menuFadeOut: "menuFadeIn 0.5s forwards ease-in-out",
 				circleAnimation: "circleAnimation 1.2s  forwards ease-in-out",
+				spin: "spin 25s linear infinite",
 			},
 			keyframes: {
 				slideInUp: {
 					"0%": { transform: "translateY(-100%)", opacity: "0" },
+					"100%": { transform: "translateY(0)", opacity: "1" },
+				},
+				slideInDown: {
+					"0%": { transform: "translateY(100%)", opacity: "0" },
 					"100%": { transform: "translateY(0)", opacity: "1" },
 				},
 				scaleOut: {
@@ -105,6 +111,10 @@ module.exports = {
 						width: "100vw",
 						height: " 100vh",
 					},
+				},
+				spin: {
+					"0%": { transform: "rotate(0deg)" },
+					"100%": { transform: "rotate(1turn)" },
 				},
 			},
 		},
