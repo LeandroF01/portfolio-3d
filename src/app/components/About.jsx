@@ -1,20 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import user from "../../assets/user.svg";
 import animation from "../../assets/animation-circle.svg";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
 export const About = () => {
-	const [isHovered, setIsHovered] = useState(false);
-
 	const [targetRef, isIntersecting] = useIntersectionObserver({
-		threshold: 0.3, // Define el umbral de intersección (50% visible)
+		threshold: 0.5, // Define el umbral de intersección (50% visible)
 	});
-
-	const moveDiv = () => {
-		setIsHovered(!isHovered);
-	};
 
 	return (
 		<section
@@ -31,9 +25,7 @@ export const About = () => {
 			<article
 				className={`my-auto relative  animate-slideInUp ${
 					isIntersecting ? "visible" : "hidden"
-				}`}
-				onMouseOver={moveDiv}
-				onMouseOut={moveDiv}>
+				}`}>
 				<div className="front relative w-[370px] h-[380px] backdrop-blur-[40px] p-[20px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] z-[1]">
 					<div className="absolute right-5 hexagon w-9 h-9 shadow-shadow-matriz flex justify-center">
 						<Image
@@ -55,10 +47,7 @@ export const About = () => {
 					</p>
 				</div>
 
-				<div
-					className={`back absolute w-[350px] h-[380px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] top-0 skew-y-6 translate-y-6 ${
-						isHovered ? "move" : ""
-					} `}></div>
+				<div className="back absolute w-[350px] h-[380px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] top-0 skew-y-6 translate-y-6"></div>
 			</article>
 		</section>
 	);
