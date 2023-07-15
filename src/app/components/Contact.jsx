@@ -14,7 +14,10 @@ export const Contact = () => {
 			id="Contact"
 			ref={targetRef}
 			className="flex justify-center items-center gap-1 h-screen  snap-start">
-			<div className="flex min-h-[500px] max-md:flex-col-reverse">
+			<div
+				className={`flex min-h-[500px] max-md:flex-col-reverse animate-slideInDown ${
+					isIntersecting ? "" : "hidden"
+				}`}>
 				<form
 					className="flex-col bg-form  w-80 h-auto px-6 py-12 space-y-6 overflow-hidden rounded-tr-[40px] max-md:rounded-[0px] max-md:rounded-bl-[40px]"
 					action="#"
@@ -71,10 +74,7 @@ export const Contact = () => {
 						</button>
 					</div>
 				</form>
-				<div
-					className={`bg-animation w-80 h-auto rounded-bl-[40px] relative overflow-hidden max-md:rounded-tr-[40px] max-md:rounded-bl-[0px] animate-slideRight2  ${
-						isIntersecting ? "visible" : "hidden"
-					}`}>
+				<div className="bg-animation w-80 h-auto rounded-bl-[40px] relative overflow-hidden max-md:rounded-tr-[40px] max-md:rounded-bl-[0px]">
 					<div className="line-shine w-full bottom-0"></div>
 					<Lottie animationData={contact} />
 				</div>
