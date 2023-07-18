@@ -42,6 +42,8 @@ export const Navbar = () => {
 
 	const [isHovered, setIsHovered] = useState(false);
 
+	const [isScreenSmall, setIsScreenSmall] = useState(false);
+
 	const handleButtonClick = () => {
 		setIsClicked(!isClicked);
 	};
@@ -90,6 +92,23 @@ export const Navbar = () => {
 		};
 	}, []);
 
+	const handleScreenResize = () => {
+		setIsScreenSmall(window.innerWidth < 1000);
+	};
+
+	// Verificar el tamaño de la pantalla al montar el componente
+	useState(() => {
+		handleScreenResize();
+	}, []);
+
+	// Agregar un event listener para cambiar el estado cuando se redimensiona la pantalla
+	useState(() => {
+		window.addEventListener("resize", handleScreenResize);
+		return () => {
+			window.removeEventListener("resize", handleScreenResize);
+		};
+	}, []);
+
 	return (
 		<nav className="flex items-center justify-between w-full p-4 lg:px-8 z-10 fixed">
 			<button
@@ -125,7 +144,7 @@ export const Navbar = () => {
 					}`}></div>
 				{LINKS.map(({ label, route }, index) => (
 					<li
-						onClick={toggleMenu}
+						onClick={isScreenSmall ? toggleMenu : null}
 						key={route}
 						className={` hover:text-white relative px-3 py-1 z-10  ${
 							activeSection === route
@@ -156,7 +175,7 @@ export const Navbar = () => {
 					className={`flex flex-row justify-center items-center cursor-pointer rounded-md px-3 py-1 bg-presentation-dark-landing ring-1 ring-fuchsia-400/60 ${
 						isMenuOpen ? "opacity-0 animate-menuFadeIn" : "max-lg:hidden"
 					} `}>
-					<p className="flex justify-center items-center gap-3">
+					<span className="flex justify-center items-center gap-3">
 						Download
 						{isClicked && (
 							<Checked color={"white"} width={"20px"} height={"20px"} />
@@ -169,7 +188,7 @@ export const Navbar = () => {
 								<Cv color={"white"} />
 							</div>
 						)}
-					</p>
+					</span>
 				</button>
 			</ul>
 		</nav>
