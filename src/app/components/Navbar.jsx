@@ -92,7 +92,6 @@ export const Navbar = () => {
 
 	return (
 		<nav className="flex items-center justify-between w-full p-4 lg:px-8 z-10 fixed">
-			<img src="" alt="" />
 			<button
 				className="absolute top-1 right-1 lg:hidden cursor-pointer focus:outline-none p-3 z-10"
 				onClick={toggleMenu}>
@@ -147,27 +146,32 @@ export const Navbar = () => {
 						</Link>
 					</li>
 				))}
+				<button
+					onClick={handleButtonClick}
+					onMouseEnter={handleMouseEnter}
+					onMouseLeave={handleMouseLeave}
+					style={{
+						animationDelay: `${LINKS.length * 0.1 + 0.4}s`,
+					}}
+					className={`flex flex-row justify-center items-center cursor-pointer rounded-md px-3 py-1 bg-presentation-dark-landing ring-1 ring-fuchsia-400/60 ${
+						isMenuOpen ? "opacity-0 animate-menuFadeIn" : "max-lg:hidden"
+					} `}>
+					<p className="flex justify-center items-center gap-3">
+						Download
+						{isClicked && (
+							<Checked color={"white"} width={"20px"} height={"20px"} />
+						)}
+						{isHovered && !isClicked && (
+							<DownArrow color={"white"} width={"20px"} height={"20px"} />
+						)}
+						{!isHovered && !isClicked && (
+							<div className="w-[20px] h-[20px]">
+								<Cv color={"white"} />
+							</div>
+						)}
+					</p>
+				</button>
 			</ul>
-			<button
-				onClick={handleButtonClick}
-				onMouseEnter={handleMouseEnter}
-				onMouseLeave={handleMouseLeave}
-				className="flex flex-row lg:block cursor-pointer rounded-md px-3 py-1 bg-presentation-dark-landing ring-1 ring-fuchsia-400/60">
-				<p className="flex gap-3">
-					Download
-					{isClicked && (
-						<Checked color={"white"} width={"20px"} height={"20px"} />
-					)}
-					{isHovered && !isClicked && (
-						<DownArrow color={"white"} width={"20px"} height={"20px"} />
-					)}
-					{!isHovered && !isClicked && (
-						<div className="w-[20px] h-[20px]">
-							<Cv color={"white"} />
-						</div>
-					)}
-				</p>
-			</button>
 		</nav>
 	);
 };
