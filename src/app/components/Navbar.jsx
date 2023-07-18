@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { Cv, DownArrow, Checked } from "./icons/Download.jsx";
 
 const LINKS = [
 	{
@@ -37,6 +38,21 @@ export const Navbar = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("");
 
+	const [isClicked, setIsClicked] = useState(false);
+
+	const [isHovered, setIsHovered] = useState(false);
+
+	const handleButtonClick = () => {
+		setIsClicked(!isClicked);
+	};
+
+	const handleMouseEnter = () => {
+		setIsHovered(true);
+	};
+
+	const handleMouseLeave = () => {
+		setIsHovered(false);
+	};
 	const toggleMenu = () => {
 		setMenuOpen(!isMenuOpen);
 	};
@@ -101,22 +117,24 @@ export const Navbar = () => {
 						}`}></span>
 				</div>
 			</button>
-			<ul className="lg:flex lg:gap-4 lg:items-center mx-auto text-white ">
+			<ul className="flex max-lg:flex-col max-lg:justify-center  max-lg:gap-10 mx-auto max-lg:h-full max-lg:w-full max-lg:text-2xl  max-lg:my-10">
 				<div
 					className={`${
 						isMenuOpen
-							? "max-lg:circle max-lg:absolute max-lg:top-[-40px] max-lg:right-[-40px] max-lg:w-[70px] max-lg:h-[70px] max-lg:rounded-bl-full max-lg:bg-red-500 max-lg:animate-circleAnimation max-lg:overflow-hidden  z-0"
+							? "max-lg:circle max-lg:absolute max-lg:top-[-40px] max-lg:right-[-40px] max-lg:w-[70px] max-lg:h-[70px] max-lg:rounded-bl-full max-lg:bg-slate-800 max-lg:animate-circleAnimation max-lg:overflow-hidden  z-0"
 							: ""
 					}`}></div>
 				{LINKS.map(({ label, route }, index) => (
 					<li
 						onClick={toggleMenu}
 						key={route}
-						className={`cursor-pointer relative px-3 py-1 z-10 ${
-							activeSection === route ? "text-red-500" : ""
+						className={` hover:text-white relative px-3 py-1 z-10  ${
+							activeSection === route
+								? "text-white font-semibold"
+								: "text-stone-400"
 						}`}>
 						<Link
-							className={` ${
+							className={`cursor-pointer ${
 								isMenuOpen
 									? "opacity-0 animate-menuFadeIn"
 									: "delay-1000 animate-menuFadeOut max-lg:hidden"
@@ -130,8 +148,25 @@ export const Navbar = () => {
 					</li>
 				))}
 			</ul>
-			<button className="hidden lg:block cursor-pointer rounded-md px-3 py-1 bg-presentation-dark-landing ring-1 ring-fuchsia-400/60">
-				Download CV
+			<button
+				onClick={handleButtonClick}
+				onMouseEnter={handleMouseEnter}
+				onMouseLeave={handleMouseLeave}
+				className="flex flex-row lg:block cursor-pointer rounded-md px-3 py-1 bg-presentation-dark-landing ring-1 ring-fuchsia-400/60">
+				<p className="flex gap-3">
+					Download
+					{isClicked && (
+						<Checked color={"white"} width={"20px"} height={"20px"} />
+					)}
+					{isHovered && !isClicked && (
+						<DownArrow color={"white"} width={"20px"} height={"20px"} />
+					)}
+					{!isHovered && !isClicked && (
+						<div className="w-[20px] h-[20px]">
+							<Cv color={"white"} />
+						</div>
+					)}
+				</p>
 			</button>
 		</nav>
 	);
