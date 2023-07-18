@@ -33,12 +33,7 @@ input, textarea{
 
 body {
 	color: rgb(var(--foreground-rgb));
-	background: linear-gradient(
-			to bottom,
-			transparent,
-			rgb(var(--background-end-rgb))
-		)
-		rgb(var(--background-start-rgb));
+	
 }
 
 .animate-textKA span {
@@ -49,7 +44,7 @@ body {
 @keyframes textKA {
 	0% {
 		opacity: 0;
-		transform: translateY(-180%);
+		transform: translateY(-100%);
 	}
 	100% {
 		opacity: 1;
