@@ -43,7 +43,7 @@ export const Home = () => {
 				))}
 			</h1>
 
-			{/* <ComputersCanvas /> */}
+			<ComputersCanvas />
 		</section>
 	);
 };
