@@ -23,11 +23,11 @@ export const About = () => {
 			</div>
 
 			<article
-				className={`my-auto relative  animate-slideInUp ${
+				className={`max-w-[640px] h-[380px] my-auto mx-5 relative  animate-slideInUp ${
 					isIntersecting ? "visible" : "hidden"
 				}`}>
-				<div className="front relative w-[370px] h-[380px] backdrop-blur-[40px] p-[20px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] z-[1]">
-					<div className="absolute right-5 hexagon w-9 h-9 shadow-shadow-matriz flex justify-center">
+				<div className="front relative max-w-[640px] h-[380px] backdrop-blur-[40px] p-[20px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] z-[1]">
+					<div className="absolute bg-box-matriz right-5 hexagon w-10 h-11 shadow-shadow-matriz flex justify-center">
 						<Image
 							src={user}
 							width={30}
@@ -47,7 +47,7 @@ export const About = () => {
 					</p>
 				</div>
 
-				<div className="back absolute w-[350px] h-[380px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] top-0 skew-y-6 translate-y-6"></div>
+				<div className="back absolute w-full h-[380px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] top-2 skew-y-6 translate-y-6"></div>
 			</article>
 		</section>
 	);

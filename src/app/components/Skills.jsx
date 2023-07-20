@@ -32,11 +32,11 @@ export const Skills = () => {
 			id="Skills"
 			ref={targetRef}
 			className="w-full h-screen flex justify-center items-center  snap-start">
-			<section className="max-w-4xl flex justify-center items-center flex-wrap gap-7">
+			<section className="max-w-[640px] flex justify-center items-center flex-wrap">
 				{skills.map((skill, index) => (
 					<article
 						key={skill.name}
-						className={`w-40 h-16 bg-experience relative rounded-md animate-slideBlur opacity-0  ${
+						className={`w-40 h-16 bg-experience relative rounded-md animate-slideBlur opacity-0 my-3 ${
 							isIntersecting ? "visible" : "hidden"
 						} `}
 						style={{

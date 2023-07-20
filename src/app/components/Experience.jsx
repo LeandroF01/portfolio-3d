@@ -23,16 +23,16 @@ export const Experience = () => {
 			className="flex flex-col justify-center items-center w-full h-screen snap-start">
 			<h2>Experience</h2>
 			<div
-				className={`border-l-2 border-dashed h-2/3 animate-slideInUp  ${
+				className={`border-l-2 border-dashed h-2/3 animate-slideInUp mx-8  ${
 					isIntersecting ? "visible" : "hidden"
 				}`}>
 				{experiences.map((experience, index) => (
 					<article
 						key={experience.titulo}
-						className={`w-80 h-52 mx-6 my-4 bg-experience rounded-xl relative ${selectSlide(
+						className={`max-w-[640px] h-52 mx-6 my-4 bg-experience rounded-xl relative ${selectSlide(
 							index
 						)} ${isIntersecting ? "visible" : "hidden"}`}>
-						<div className="absolute w-48 h-[1px] top-0 left-[20%] bg-border-gradiant"></div>
+						<div className="absolute w-48 h-[1px] top-0 left-[50%] -translate-x-1/2 bg-border-gradiant"></div>
 						<div className="w-[50px] h-[55px] hexagon bg-hexagon-ex absolute top-1/3 left-[-50px] "></div>
 						<div className="flex justify-between m-4">
 							<h3 className="text-xl text-white">{experience.titulo}</h3>
@@ -41,10 +41,10 @@ export const Experience = () => {
 								<p className="text-gray-400">{experience.estado}</p>
 							</div>
 						</div>
-						<p className="text-sm text-gray-400 m-2">
+						<p className="text-sm text-gray-400 mx-5">
 							{experience.descripcion}
 						</p>
-						<div className="absolute w-48 h-[1px] bottom-0 left-[20%] bg-border-gradiant"></div>
+						<div className="absolute w-48 h-[1px] bottom-0 left-[50%] -translate-x-1/2 bg-border-gradiant"></div>
 					</article>
 				))}
 			</div>
