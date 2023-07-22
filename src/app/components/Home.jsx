@@ -1,5 +1,4 @@
 import React from "react";
-import ComputersCanvas from "./Computer";
 
 export const Home = () => {
 	const text1 = "Hello, I'm Leandro Farias";
@@ -42,8 +41,6 @@ export const Home = () => {
 					</span>
 				))}
 			</h1>
-
-			<ComputersCanvas />
 		</section>
 	);
 };
