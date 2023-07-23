@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import contact from "../../json/anim/animation_lkfk3q45.json";
+import Lottie from "lottie-react";
 
 export const Home = () => {
 	const text1 = "Hello, I'm Leandro Farias";
@@ -16,6 +19,7 @@ export const Home = () => {
 		<section
 			id="Home"
 			className="flex justify-between flex-col w-full h-screen snap-center ">
+			<Lottie className="absolute -z-10" animationData={contact} />
 			<h1 className="gap-8 h-4 mt-28 relative animate-textKA font-poppins dark:text-white text-pro-w-black font-bold md:text-[64px] md:leading-[70px] text-[40px] leading-[46px] tracking-[-0.5%] text-center">
 				{letter1.map((letter, index) => (
 					<span

@@ -5,6 +5,8 @@ import user from "../../assets/user.svg";
 import animation from "../../assets/animation-circle.svg";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
+import { Waves } from "./icons/Waves.jsx";
+
 export const About = () => {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
 		threshold: 0.5, // Define el umbral de intersección (50% visible)
@@ -14,7 +16,11 @@ export const About = () => {
 		<section
 			id="About"
 			ref={targetRef}
-			className="flex justify-center w-full h-screen relative overflow-hidden snap-start">
+			className="flex justify-center w-full h-screen relative overflow-hidden snap-start ">
+			<div className="absolute top-0 w-full -z-10">
+				<Waves />
+			</div>
+
 			<div
 				className={`absolute max-w-2xl top-5 animate-scaleOut ${
 					isIntersecting ? "visible" : "hidden"
