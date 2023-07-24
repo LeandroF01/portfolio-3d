@@ -10,9 +10,9 @@ export const Experience = () => {
 
 	function selectSlide(num) {
 		if (num % 2 === 0) {
-			return "animate-slideRight";
+			return "animate-slideRight left-1/2 max-lg:left-0 mx-[25px]";
 		} else {
-			return "animate-slideLeft";
+			return "animate-slideLeft right-1/2 max-lg:left-0 -mx-[27px]";
 		}
 	}
 
@@ -20,20 +20,28 @@ export const Experience = () => {
 		<section
 			id="Experience"
 			ref={targetRef}
-			className="flex flex-col justify-center items-center w-full h-screen snap-start">
+			className="flex flex-col justify-center items-center w-full h-screen ">
 			<h2>Experience</h2>
-			<div
-				className={`border-l-2 border-dashed h-2/3 animate-slideInUp mx-8  ${
+
+			<section
+				className={`flex justify-center items-center flex-col max-w-[600px] h-full relative animate-slideInUp ${
 					isIntersecting ? "visible" : "hidden"
 				}`}>
+				<div className="border-l-2 border-dashed absolute h-1/2  max-lg:left-0"></div>
+
 				{experiences.map((experience, index) => (
 					<article
 						key={experience.titulo}
-						className={`max-w-[640px] h-52 mx-6 my-4 bg-experience rounded-xl relative ${selectSlide(
+						className={`w-[300px] h-52 bg-experience rounded-xl relative m-3 ${selectSlide(
 							index
 						)} ${isIntersecting ? "visible" : "hidden"}`}>
 						<div className="absolute w-48 h-[1px] top-0 left-[50%] -translate-x-1/2 bg-border-gradiant"></div>
-						<div className="w-[50px] h-[55px] hexagon bg-hexagon-ex absolute top-1/3 left-[-50px] "></div>
+						<div
+							className={`w-[50px] h-[55px] hexagon bg-hexagon-ex absolute top-1/3 ${
+								index % 2 === 0
+									? "-left-[50px]"
+									: "-right-[50px] max-lg:-left-[50px]"
+							} `}></div>
 						<div className="flex justify-between m-4">
 							<h3 className="text-xl text-white">{experience.titulo}</h3>
 							<div className="text-sm text-white">
@@ -47,7 +55,7 @@ export const Experience = () => {
 						<div className="absolute w-48 h-[1px] bottom-0 left-[50%] -translate-x-1/2 bg-border-gradiant"></div>
 					</article>
 				))}
-			</div>
+			</section>
 		</section>
 	);
 };

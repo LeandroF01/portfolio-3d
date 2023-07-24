@@ -22,14 +22,14 @@ export const About = () => {
 			</div>
 
 			<div
-				className={`absolute max-w-2xl top-5 animate-scaleOut ${
+				className={`absolute max-w-2xl top-5 animate-scaleOut  -z-20 ${
 					isIntersecting ? "visible" : "hidden"
 				}`}>
 				<Image className="animate-spin" src={animation} />
 			</div>
 
 			<article
-				className={`max-w-[640px] h-[380px] my-auto mx-5 relative  animate-slideInUp ${
+				className={`max-w-[520px] h-[380px] my-auto mx-5 relative  animate-slideInUp ${
 					isIntersecting ? "visible" : "hidden"
 				}`}>
 				<div className="front relative max-w-[640px] h-[380px] backdrop-blur-[40px] p-[20px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] z-[1]">
