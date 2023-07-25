@@ -201,4 +201,5 @@ filter: drop-shadow(0px 14px 20px rgba(42, 51, 83, 0.8));
     z-index: -1;
     pointer-events: none;
     background-image: url("/img/noise.gif");
+	
 }
