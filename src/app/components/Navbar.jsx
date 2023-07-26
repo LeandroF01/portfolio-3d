@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Cv, DownArrow, Checked } from "./icons/Download.jsx";
 
 const LINKS = [
 	{
@@ -38,23 +37,8 @@ export const Navbar = () => {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("");
 
-	const [isClicked, setIsClicked] = useState(false);
-
-	const [isHovered, setIsHovered] = useState(false);
-
 	const [isScreenSmall, setIsScreenSmall] = useState(false);
 
-	const handleButtonClick = () => {
-		setIsClicked(!isClicked);
-	};
-
-	const handleMouseEnter = () => {
-		setIsHovered(true);
-	};
-
-	const handleMouseLeave = () => {
-		setIsHovered(false);
-	};
 	const toggleMenu = () => {
 		setMenuOpen(!isMenuOpen);
 	};
@@ -165,31 +149,6 @@ export const Navbar = () => {
 						</Link>
 					</li>
 				))}
-				<button
-					onClick={handleButtonClick}
-					onMouseEnter={handleMouseEnter}
-					onMouseLeave={handleMouseLeave}
-					style={{
-						animationDelay: `${LINKS.length * 0.1 + 0.4}s`,
-					}}
-					className={`flex flex-row justify-center items-center cursor-pointer rounded-md px-3 py-1 bg-presentation-dark-landing ring-1 ring-fuchsia-400/60 ${
-						isMenuOpen ? "opacity-0 animate-menuFadeIn" : "max-lg:hidden"
-					} `}>
-					<span className="flex justify-center items-center gap-3">
-						Download
-						{isClicked && (
-							<Checked color={"white"} width={"20px"} height={"20px"} />
-						)}
-						{isHovered && !isClicked && (
-							<DownArrow color={"white"} width={"20px"} height={"20px"} />
-						)}
-						{!isHovered && !isClicked && (
-							<div className="w-[20px] h-[20px]">
-								<Cv color={"white"} />
-							</div>
-						)}
-					</span>
-				</button>
 			</ul>
 		</nav>
 	);
