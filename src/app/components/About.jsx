@@ -17,7 +17,7 @@ export const About = () => {
 			id="About"
 			ref={targetRef}
 			className="flex justify-center w-full h-screen relative overflow-hidden snap-start ">
-			<div className="absolute top-0 w-full -z-10">
+			<div className="absolute top-0 w-full">
 				<Waves />
 			</div>
 

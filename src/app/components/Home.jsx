@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import contact from "../../json/anim/animation_lkfk3q45.json";
 import Lottie from "lottie-react";
 import { Cv, DownArrow, Checked } from "./icons/Download.jsx";
+import { Github } from "./icons/Github.jsx";
+import { Linkedin } from "./icons/Linkedin.jsx";
 
 export const Home = () => {
 	const text1 = "Hello, I'm Leandro Farias";
@@ -50,9 +52,9 @@ export const Home = () => {
 	return (
 		<section
 			id="Home"
-			className="flex items-center flex-col w-full h-screen overflow-hidden relative -z-10 bg-[#00024C]">
+			className="flex items-center flex-col w-full h-screen overflow-hidden relative bg-[#00024C]">
 			<Lottie
-				className="absolute top-1/2 -translate-y-1/2 -z-10"
+				className="absolute top-1/2 -translate-y-1/2 "
 				animationData={contact}
 			/>
 			<div className="flex">
@@ -83,12 +85,26 @@ export const Home = () => {
 				</h1>
 			</div>
 
-			<section className="flex flex-col">
+			<section className="flex flex-col z-10 my-20 gap-2">
+				<ul className="flex justify-center items-center gap-1">
+					<li className=" w-full">
+						<a className="button" href="">
+							<Github color={"white"} width={"20px"} height={"20px"} />
+							Github
+						</a>
+					</li>
+					<li className=" w-full">
+						<a className="button" href="">
+							<Linkedin color={"white"} width={"20px"} height={"20px"} />
+							Linkedin
+						</a>
+					</li>
+				</ul>
 				<button
 					onClick={handleButtonClick}
 					onMouseEnter={handleMouseEnter}
 					onMouseLeave={handleMouseLeave}
-					className={`flex flex-row justify-center items-center cursor-pointer rounded-md px-3 py-1 w-36 bg-[#2900F6] ring-1 ring-fuchsia-400/60  `}>
+					className={`flex flex-row justify-center items-center cursor-pointer rounded-md px-3 py-1 cssbuttons-io `}>
 					<span className="flex justify-center items-center gap-3">
 						Download
 						{isClicked && (
