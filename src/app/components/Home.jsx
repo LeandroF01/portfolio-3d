@@ -88,13 +88,13 @@ export const Home = () => {
 			<section className="flex flex-col z-10 my-20 gap-2">
 				<ul className="flex justify-center items-center gap-1">
 					<li className=" w-full">
-						<a className="button" href="">
+						<a className="button__github" href="">
 							<Github color={"white"} width={"20px"} height={"20px"} />
 							Github
 						</a>
 					</li>
 					<li className=" w-full">
-						<a className="button" href="">
+						<a className="button__linkedin" href="">
 							<Linkedin color={"white"} width={"20px"} height={"20px"} />
 							Linkedin
 						</a>
