@@ -53,13 +53,16 @@ export default function Projects() {
 						<section
 							onMouseOver={moveDiv}
 							onMouseOut={moveDiv}
-							className="flex justify-center flex-col bg-animation top-32  w-full rounded-2xl overflow-hidden">
-							<h3 className="text-center p-2 font-">{project.title}</h3>
+							className="flex justify-center flex-col bg-animation relative -top-10 w-full rounded-2xl overflow-hidden">
+								<section className="flex justify-center text-center h-16">
+								<h3 className="p-1">{project.title}</h3>
+								</section>
+							
 							<div className="w-72 mx-auto h-[1px] bg-slate-300">
 								<div className="line-shine"></div>
 							</div>
 
-							<section className="overflow-y-auto">
+							<section className="overflow-y-auto h-40 scrollbar">
 								<p className="mx-4 my-3 text-xs bg-text ">
 									{project.description}
 								</p>
