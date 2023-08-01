@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import aaa from "../../assets/AAA.png";
+import Link from "next/link";
 
 import projects from "../../json/projects.json";
 
@@ -33,8 +33,10 @@ export default function Projects() {
 						</ul>
 						<div className="w-full rounded-2xl overflow-hidden">
 							<Image
-								src={aaa}
-								className="transform hover:scale-110 transition duration-300"
+								src={project.image}
+								width={800}
+								height={800}
+								className="w-full transform hover:scale-110 transition duration-300"
 							/>
 						</div>
 
@@ -44,8 +46,8 @@ export default function Projects() {
 							onMouseOver={moveDiv}
 							onMouseOut={moveDiv}
 							className="flex justify-center flex-col bg-animation relative -top-10 w-full rounded-2xl overflow-hidden">
-							<section className="flex justify-center text-center h-16">
-								<h3 className="p-1">{project.title}</h3>
+							<section className="flex justify-center text-center h-16 bg-slate-950/70">
+								<h3 className="p-1 font-semibold">{project.title}</h3>
 							</section>
 
 							<div className="w-72 mx-auto h-[1px] bg-slate-300">
@@ -60,14 +62,20 @@ export default function Projects() {
 
 							<ul className="flex justify-center gap-3 my-2">
 								<li className="flex justify-center bg-links w-8 h-8 rounded-full">
-									<a href="" className="flex justify-center my-auto  w-4">
+									<Link
+										href={project.github}
+										target="_blank"
+										className="flex justify-center my-auto  w-4">
 										<Github color={"white"} width={"20px"} height={"20px"} />
-									</a>
+									</Link>
 								</li>
 								<li className="flex justify-center bg-links w-8 h-8 rounded-full">
-									<a href="" className="flex justify-center my-auto  w-4">
+									<Link
+										href={project.link}
+										target="_blank"
+										className="flex justify-center my-auto  w-4">
 										<NetLink color={"white"} width={"20px"} height={"20px"} />
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</section>
