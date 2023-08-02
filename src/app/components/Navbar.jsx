@@ -80,16 +80,20 @@ export const Navbar = () => {
 		setIsScreenSmall(window.innerWidth < 1000);
 	};
 
-	// Verificar el tamaño de la pantalla al montar el componente
-	useState(() => {
-		handleScreenResize();
-	}, []);
+	useEffect(() => {
+		// Check if window is defined before using it (for client-side rendering)
+		if (typeof window !== "undefined") {
+			setIsScreenSmall(window.innerWidth < 1000);
 
-	// Agregar un event listener para cambiar el estado cuando se redimensiona la pantalla
-	useState(() => {
-		window.addEventListener("resize", handleScreenResize);
+			// Add event listener to handle screen resize on the client-side
+			window.addEventListener("resize", handleScreenResize);
+		}
+
+		// Remove the event listener when the component unmounts
 		return () => {
-			window.removeEventListener("resize", handleScreenResize);
+			if (typeof window !== "undefined") {
+				window.removeEventListener("resize", handleScreenResize);
+			}
 		};
 	}, []);
 
