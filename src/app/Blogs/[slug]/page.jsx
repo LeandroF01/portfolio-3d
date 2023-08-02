@@ -38,8 +38,6 @@ export default function Page({ params }) {
 
 	return (
 		<article id="Blog">
-			<h2>asdasd</h2>
-
 			<MDXRemote source={content}></MDXRemote>
 		</article>
 	);
