@@ -19,26 +19,30 @@ export async function generateStaticParams() {
 
 function getPost({ slug }) {
 	const root = process.cwd();
+
 	const markdownFile = fs.readFileSync(
 		path.join(root, "src", "data", `${slug}.mdx`),
 		"utf-8"
 	);
 
-	const { fontMatter, content } = matter(markdownFile);
+	const { data, content } = matter(markdownFile);
 
 	return {
-		fontMatter,
+		data,
 		slug,
 		content,
 	};
 }
 
 export default function Page({ params }) {
-	const { fontMatter, content } = getPost(params);
+	const props = getPost(params);
 
 	return (
-		<article id="Blog">
-			<MDXRemote source={content}></MDXRemote>
-		</article>
+		<section id="Blog" className="flex justify-center items-center">
+			<article className="flex flex-col justify-center max-w-4xl gap-5 my-16">
+				<h2 className="text-5xl font-bold my-3">{props.data?.title}</h2>
+				<MDXRemote source={props.content}></MDXRemote>
+			</article>
+		</section>
 	);
 }
