@@ -39,6 +39,24 @@ export const Navbar = () => {
 
 	const [isScreenSmall, setIsScreenSmall] = useState(false);
 
+	const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 0) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	const toggleMenu = () => {
 		setMenuOpen(!isMenuOpen);
 	};
@@ -98,7 +116,10 @@ export const Navbar = () => {
 	}, []);
 
 	return (
-		<nav className="flex items-center justify-between w-full p-4 lg:px-8 z-10 fixed">
+		<nav
+			className={`flex items-center justify-between w-full h-12 z-10 fixed  ${
+				scrolled ? "bg-navbar" : ""
+			}`}>
 			<button
 				className="absolute top-1 right-1 lg:hidden cursor-pointer focus:outline-none p-3 z-10"
 				onClick={toggleMenu}>
