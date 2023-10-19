@@ -5,8 +5,6 @@ import user from "../../assets/user.svg";
 import animation from "../../assets/animation-circle.svg";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
-import { Waves } from "./icons/Waves.jsx";
-
 export const About = () => {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
 		threshold: 0.5, // Define el umbral de intersección (50% visible)

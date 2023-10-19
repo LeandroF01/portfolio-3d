@@ -5,8 +5,8 @@ import Link from "next/link";
 
 import projects from "../../json/projects.json";
 
-import { Github } from "../components/icons/Github.jsx";
-import { NetLink } from "../components/icons/NetLink.jsx";
+import { Github } from "./components/icons/Github.jsx";
+import { NetLink } from "./components/icons/NetLink.jsx";
 
 export default function Projects() {
 	const [isHovered, setIsHovered] = useState(false);
