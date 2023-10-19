@@ -1,7 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import contact from "../../json/anim/animation_lkfk3q45.json";
-import Lottie from "lottie-react";
+
+import Image from "next/image";
+
+import font from "../../assets/bg-security-upper-mg.svg";
 import { Cv, DownArrow, Checked } from "./icons/Download.jsx";
 import { Github } from "./icons/Github.jsx";
 import { Linkedin } from "./icons/Linkedin.jsx";
@@ -22,14 +24,23 @@ export const Home = () => {
 	const [scale, setScale] = useState(window.innerWidth >= 700 ? 5 : 2);
 
 	useEffect(() => {
-		const handleResize = () => {
-			setScale(window.innerWidth >= 700 ? 2 : 5);
-		};
+		if (typeof window !== "undefined") {
+			setScale(window.innerWidth >= 700 ? 5 : 2);
+		}
 
-		window.addEventListener("resize", handleResize);
+		if (typeof window !== "undefined") {
+			window.addEventListener("resize", handleResize);
+		}
+
+		// Define la función handleResize
+		function handleResize() {
+			setScale(window.innerWidth >= 700 ? 5 : 2);
+		}
 
 		return () => {
-			window.removeEventListener("resize", handleResize);
+			if (typeof window !== "undefined") {
+				window.removeEventListener("resize", handleResize);
+			}
 		};
 	}, []);
 
@@ -52,10 +63,20 @@ export const Home = () => {
 	return (
 		<section
 			id="Home"
-			className="flex items-center flex-col w-full h-screen overflow-hidden relative bg-[#00024C]">
-			<Lottie
-				className="absolute top-1/2 -translate-y-1/2 "
-				animationData={contact}
+			className="flex items-center flex-col w-full h-screen overflow-hidden relative bg-home">
+			<Image
+				src={font}
+				width={900}
+				height={700}
+				alt="img"
+				className="absolute -z-50 -top-60 -right-60 scale-up-center"
+			/>
+			<Image
+				src={font}
+				width={500}
+				height={400}
+				alt="img"
+				className="absolute -z-50 -bottom-10 -left-12 scale-up-center2"
 			/>
 			<div className="flex">
 				<h1 className="gap-8 mt-28 relative animate-textKA font-poppins dark:text-white text-pro-w-black font-bold md:text-[64px] md:leading-[70px] text-[40px] leading-[46px] tracking-[-0.5%] text-center">
@@ -78,7 +99,7 @@ export const Home = () => {
 							style={{
 								animationDelay: `${letter2Delay + index * delayIncrement}s`,
 							}}
-							className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text inline-block">
+							className="bg-gradient-to-r text-white text-transparent bg-clip-text inline-block">
 							{letter}
 						</span>
 					))}

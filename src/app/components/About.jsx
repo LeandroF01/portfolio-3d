@@ -17,10 +17,6 @@ export const About = () => {
 			id="About"
 			ref={targetRef}
 			className="flex justify-center w-full h-screen relative overflow-hidden snap-start ">
-			<div className="absolute top-0 w-full">
-				<Waves />
-			</div>
-
 			<div
 				className={`absolute max-w-2xl top-5 animate-scaleOut  -z-20 ${
 					isIntersecting ? "visible" : "hidden"

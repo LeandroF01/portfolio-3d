@@ -6,7 +6,7 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
 export const Contact = () => {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
-		threshold: 0.5, // Define el umbral de intersección (50% visible)
+		threshold: 0.5,
 	});
 
 	return (
@@ -19,7 +19,7 @@ export const Contact = () => {
 					isIntersecting ? "" : "hidden"
 				}`}>
 				<form
-					className="flex-col bg-form  w-80 h-auto px-6 py-12 space-y-6 overflow-hidden rounded-tr-[40px] max-md:rounded-[0px] max-md:rounded-bl-[40px]"
+					className="flex-col bg-animation  w-80 h-auto px-6 py-12 space-y-6 overflow-hidden rounded-tr-[40px] max-md:rounded-[0px] max-md:rounded-bl-[40px]"
 					action="https://formsubmit.co/leandro.dev.fa@gmail.com"
 					method="POST">
 					<div className="line-shine w-full top-0"></div>
@@ -81,9 +81,10 @@ export const Contact = () => {
 						</button>
 					</div>
 				</form>
-				<div className="bg-animation w-80 h-auto rounded-bl-[40px] relative overflow-hidden max-md:rounded-tr-[40px] max-md:rounded-bl-[0px]">
+				<div className="bg-[#93c5fd] w-80 h-auto rounded-bl-[40px] relative overflow-hidden max-md:rounded-tr-[40px] max-md:rounded-bl-[0px]">
 					<div className="line-shine w-full bottom-0"></div>
 					<Lottie animationData={contact} />
+					<div className="absolute -bottom-20 right-0 h-[250px] w-[200px] bg-white rounded-full opacity-10 transform translate-x-10 translate-y-10"></div>
 				</div>
 			</div>
 		</section>
