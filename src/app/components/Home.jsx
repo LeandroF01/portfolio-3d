@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import font from "../../assets/bg-security-upper-mg.svg";
-import { Cv, DownArrow, Checked } from "./icons/Download";
-import { Github } from "./icons/Github";
-import { Linkedin } from "./icons/Linkedin";
+import { Cv, DownArrow, Checked } from "./Icons/Download";
+import { Github } from "./Icons/Github";
+import { Linkedin } from "./Icons/Linkedin";
 
 export const Home = () => {
 	const text1 = "Hello, I'm Leandro Farias";
