@@ -41,26 +41,21 @@ export const Navbar = () => {
 
 	const [scrolled, setScrolled] = useState(false);
 
-	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 0) {
-				setScrolled(true);
-			} else {
-				setScrolled(false);
-			}
-		};
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		if (window.scrollY > 0) {
+	// 			setScrolled(true);
+	// 		} else {
+	// 			setScrolled(false);
+	// 		}
+	// 	};
 
-		window.addEventListener("scroll", handleScroll);
+	// 	window.addEventListener("scroll", handleScroll);
 
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
-
-	const toggleMenu = () => {
-		setMenuOpen(!isMenuOpen);
-	};
-
+	// 	return () => {
+	// 		window.removeEventListener("scroll", handleScroll);
+	// 	};
+	// }, []);
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
@@ -83,6 +78,12 @@ export const Navbar = () => {
 			} else {
 				setActiveSection("");
 			}
+
+			if (window.scrollY > 0) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
 		};
 
 		// Agregar el listener para el evento scroll
@@ -90,9 +91,46 @@ export const Navbar = () => {
 
 		// Limpiar el listener cuando el componente se desmonta
 		return () => {
-			window.removeEventListener("scroll", handleScroll());
+			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
+
+	const toggleMenu = () => {
+		setMenuOpen(!isMenuOpen);
+	};
+
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		const scrollPosition = window.scrollY;
+
+	// 		// Verificar qué sección está visible en el scroll
+	// 		const activeLink = LINKS.find(({ route }) => {
+	// 			const sectionId = route.substring(2); // Eliminar los primeros dos caracteres de la ruta ("/#")
+	// 			const element = document.getElementById(sectionId);
+
+	// 			if (element) {
+	// 				const offsetTop = element.offsetTop - 100; // Ajusta el valor para compensar el tamaño de la barra de navegación
+	// 				const offsetBottom = offsetTop + element.offsetHeight;
+	// 				return scrollPosition >= offsetTop && scrollPosition < offsetBottom;
+	// 			}
+	// 			return false;
+	// 		});
+
+	// 		if (activeLink) {
+	// 			setActiveSection(activeLink.route);
+	// 		} else {
+	// 			setActiveSection("");
+	// 		}
+	// 	};
+
+	// 	// Agregar el listener para el evento scroll
+	// 	window.addEventListener("scroll", handleScroll);
+
+	// 	// Limpiar el listener cuando el componente se desmonta
+	// 	return () => {
+	// 		window.removeEventListener("scroll", handleScroll());
+	// 	};
+	// }, []);
 
 	const handleScreenResize = () => {
 		setIsScreenSmall(window.innerWidth < 1000);
@@ -153,13 +191,13 @@ export const Navbar = () => {
 					}`}></div>
 				{LINKS.map(({ label, route }, index) => (
 					<li
-						onClick={isScreenSmall ? toggleMenu : null}
 						key={route}
 						className={` hover:text-white relative px-3 py-1 z-10  ${
 							activeSection === route
 								? "text-white font-semibold"
 								: "text-stone-400"
-						}`}>
+						}`}
+						onClick={() => isScreenSmall && toggleMenu()}>
 						<Link
 							className={`cursor-pointer ${
 								isMenuOpen
