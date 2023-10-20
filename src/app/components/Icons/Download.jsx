@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const Cv = ({ color }) => {
 	return (
@@ -88,4 +89,19 @@ export const Checked = ({ color, width, height }) => {
 			/>
 		</svg>
 	);
+};
+
+Checked.propTypes = {
+	color: PropTypes.string,
+	width: PropTypes.number,
+	height: PropTypes.number,
+};
+
+DownArrow.propTypes = {
+	color: PropTypes.string,
+	width: PropTypes.number,
+	height: PropTypes.number,
+};
+Cv.propTypes = {
+	color: PropTypes.string,
 };

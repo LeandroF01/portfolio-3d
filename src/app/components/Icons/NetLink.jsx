@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const NetLink = ({ color, width, height }) => {
 	return (
@@ -35,4 +36,10 @@ export const NetLink = ({ color, width, height }) => {
 			</g>
 		</svg>
 	);
+};
+
+NetLink.propTypes = {
+	color: PropTypes.string,
+	width: PropTypes.number,
+	height: PropTypes.number,
 };

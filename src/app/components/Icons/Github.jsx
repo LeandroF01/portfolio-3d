@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export const Github = ({ color, width, height }) => {
 	return (
@@ -16,4 +17,10 @@ export const Github = ({ color, width, height }) => {
 			</g>
 		</svg>
 	);
+};
+
+Github.propTypes = {
+	color: PropTypes.string,
+	width: PropTypes.number,
+	height: PropTypes.number,
 };
