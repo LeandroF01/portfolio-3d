@@ -5,8 +5,10 @@ import matter from "gray-matter";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 
+// eslint-disable-next-line no-undef
+const root = process.cwd();
+
 export async function generateStaticParams() {
-	const root = process.cwd();
 	const files = fs.readdirSync(path.join(root, "src", "data"));
 	const markdownFiles = files.filter((filename) => filename.endsWith(".mdx"));
 
@@ -18,8 +20,6 @@ export async function generateStaticParams() {
 }
 
 function getPost({ slug }) {
-	const root = process.cwd();
-
 	const markdownFile = fs.readFileSync(
 		path.join(root, "src", "data", `${slug}.mdx`),
 		"utf-8"
@@ -34,14 +34,17 @@ function getPost({ slug }) {
 	};
 }
 
+// eslint-disable-next-line react/prop-types
 export default function Page({ params }) {
 	const props = getPost(params);
 
 	return (
 		<section id="Blog" className="flex justify-center items-center">
 			<article className="flex flex-col justify-center max-w-4xl gap-5 my-16">
-				<h2 className="text-5xl font-bold my-3">{props.data?.title}</h2>
-				<MDXRemote source={props.content}></MDXRemote>
+				{/*eslint-disable-next-line react/prop-types, react/prop-types */}
+				<h2 className="text-5xl font-bold my-3">{props?.data.title}</h2>
+				{/* eslint-disable-next-line react/prop-types */}
+				<MDXRemote source={props?.content}></MDXRemote>
 			</article>
 		</section>
 	);

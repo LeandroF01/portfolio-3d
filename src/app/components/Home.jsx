@@ -21,6 +21,7 @@ export const Home = () => {
 	const delayIncrement = 0.1;
 	const letter2Delay = letter1.length * delayIncrement;
 
+	// eslint-disable-next-line no-unused-vars
 	const [scale, setScale] = useState(window.innerWidth >= 700 ? 5 : 2);
 
 	useEffect(() => {
