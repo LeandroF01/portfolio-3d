@@ -9,13 +9,14 @@ const useIntersectionObserver = (options) => {
 			setIsIntersecting(entry.isIntersecting);
 		}, options);
 
-		if (targetRef.current) {
-			observer.observe(targetRef.current);
+		const currentTarget = targetRef.current; // Copia el valor de targetRef.current
+		if (currentTarget) {
+			observer.observe(currentTarget);
 		}
 
 		return () => {
-			if (targetRef.current) {
-				observer.unobserve(targetRef.current);
+			if (currentTarget) {
+				observer.unobserve(currentTarget);
 			}
 		};
 	}, [options]);

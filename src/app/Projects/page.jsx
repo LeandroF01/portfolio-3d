@@ -27,7 +27,7 @@ export default function Projects() {
 								<li
 									key={index}
 									className="flex justify-center items-center hexagon w-7 h-7 bg-icons">
-									<Image src={url} width={15} height={15} />
+									<Image src={url} width={15} height={15} alt={url} />
 								</li>
 							))}
 						</ul>
@@ -36,6 +36,7 @@ export default function Projects() {
 								src={project.image}
 								width={800}
 								height={800}
+								alt={project.title}
 								className="w-full transform hover:scale-110 transition duration-300"
 							/>
 						</div>

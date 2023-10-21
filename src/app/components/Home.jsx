@@ -22,20 +22,21 @@ export const Home = () => {
 	const letter2Delay = letter1.length * delayIncrement;
 
 	// eslint-disable-next-line no-unused-vars
-	const [scale, setScale] = useState(window.innerWidth >= 700 ? 5 : 2);
+	const [scale, setScale] = useState(
+		typeof window !== "undefined" ? (window.innerWidth >= 700 ? 5 : 2) : 2
+	);
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
 			setScale(window.innerWidth >= 700 ? 5 : 2);
-		}
-
-		if (typeof window !== "undefined") {
 			window.addEventListener("resize", handleResize);
 		}
 
 		// Define la función handleResize
 		function handleResize() {
-			setScale(window.innerWidth >= 700 ? 5 : 2);
+			if (typeof window !== "undefined") {
+				setScale(window.innerWidth >= 700 ? 5 : 2);
+			}
 		}
 
 		return () => {

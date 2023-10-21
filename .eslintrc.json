@@ -5,7 +5,8 @@
 		"node": true,
 		"commonjs": true
 	},
-	"extends": ["eslint:recommended", "plugin:react/recommended"],
+
+	"extends": "next/core-web-vitals",
 	"overrides": [],
 	"parserOptions": {
 		"ecmaVersion": "latest",

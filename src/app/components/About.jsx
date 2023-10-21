@@ -19,7 +19,7 @@ export const About = () => {
 				className={`absolute max-w-2xl top-5 animate-scaleOut  -z-20 ${
 					isIntersecting ? "visible" : "hidden"
 				}`}>
-				<Image className="animate-spin" src={animation} />
+				<Image className="animate-spin" src={animation} alt="animate-spin" />
 			</div>
 
 			<article
