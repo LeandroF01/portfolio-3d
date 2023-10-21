@@ -5,8 +5,12 @@ import matter from "gray-matter";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 
-// eslint-disable-next-line no-undef
-const root = process.cwd();
+let root;
+
+if (typeof process !== "undefined") {
+	// Tu código que utiliza process aquí
+	root = process.cwd();
+}
 
 export async function generateStaticParams() {
 	const files = fs.readdirSync(path.join(root, "src", "data"));
