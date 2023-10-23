@@ -4,7 +4,7 @@ import Image from "next/image";
 import skills from "../../json/skills.json";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
-export const Skills = () => {
+function Skills() {
 	const [hoveredElements, setHoveredElements] = useState({});
 
 	const toggleHover = (key) => {
@@ -67,4 +67,6 @@ export const Skills = () => {
 			</section>
 		</section>
 	);
-};
+}
+
+export default Skills;

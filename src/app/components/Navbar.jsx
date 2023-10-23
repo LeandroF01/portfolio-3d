@@ -33,7 +33,7 @@ const LINKS = [
 	},
 ];
 
-export const Navbar = () => {
+function Navbar() {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("");
 
@@ -215,4 +215,6 @@ export const Navbar = () => {
 			</ul>
 		</nav>
 	);
-};
+}
+
+export default Navbar;

@@ -3,7 +3,7 @@ import React from "react";
 import experiences from "../../json/experiences.json";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
-export const Experience = () => {
+function Experience() {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
 		threshold: 0.5, // Define el umbral de intersección (50% visible)
 	});
@@ -58,4 +58,6 @@ export const Experience = () => {
 			</section>
 		</section>
 	);
-};
+}
+
+export default Experience;

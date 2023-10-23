@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import contact from "../../json/animation-contact.json";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
-export const Contact = () => {
+function Contact() {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
 		threshold: 0.5,
 	});
@@ -89,4 +89,6 @@ export const Contact = () => {
 			</div>
 		</section>
 	);
-};
+}
+
+export default Contact;

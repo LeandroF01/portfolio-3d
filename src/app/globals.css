@@ -210,7 +210,7 @@ background: rgba(31, 31, 71, 0.6);
 	opacity: 0.035;
 	z-index: -1;
 	pointer-events: none;
-	background-image: url("/img/noise.gif");
+	/* background-image: url("/img/noise.gif"); */
 }
 
 .cssbuttons-io {

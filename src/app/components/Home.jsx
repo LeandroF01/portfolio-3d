@@ -8,7 +8,7 @@ import { Cv, DownArrow, Checked } from "./Icons/Download";
 import { Github } from "./Icons/Github";
 import { Linkedin } from "./Icons/Linkedin";
 
-export const Home = () => {
+function Home() {
 	const text1 = "Hello, I'm Leandro Farias";
 	const letter1 = text1
 		.split("")
@@ -70,6 +70,7 @@ export const Home = () => {
 				src={font}
 				width={900}
 				height={700}
+				loading="eager"
 				alt="img"
 				className="absolute -z-50 -top-60 -right-60 scale-up-center"
 			/>
@@ -77,6 +78,7 @@ export const Home = () => {
 				src={font}
 				width={500}
 				height={400}
+				loading="eager"
 				alt="img"
 				className="absolute -z-50 -bottom-10 -left-12 scale-up-center2"
 			/>
@@ -146,4 +148,6 @@ export const Home = () => {
 			</section>
 		</section>
 	);
-};
+}
+
+export default Home;

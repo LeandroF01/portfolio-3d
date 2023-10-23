@@ -5,7 +5,7 @@ import user from "../../assets/user.svg";
 import animation from "../../assets/animation-circle.svg";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
-export const About = () => {
+function About() {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
 		threshold: 0.5, // Define el umbral de intersección (50% visible)
 	});
@@ -51,4 +51,6 @@ export const About = () => {
 			</article>
 		</section>
 	);
-};
+}
+
+export default About;
