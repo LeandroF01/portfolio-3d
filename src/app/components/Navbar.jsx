@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
+import useNavigation from "../hooks/useNavigation";
 import Link from "next/link";
 
 const LINKS = [
@@ -34,124 +35,8 @@ const LINKS = [
 ];
 
 function Navbar() {
-	const [isMenuOpen, setMenuOpen] = useState(false);
-	const [activeSection, setActiveSection] = useState("");
-
-	const [isScreenSmall, setIsScreenSmall] = useState(false);
-
-	const [scrolled, setScrolled] = useState(false);
-
-	// useEffect(() => {
-	// 	const handleScroll = () => {
-	// 		if (window.scrollY > 0) {
-	// 			setScrolled(true);
-	// 		} else {
-	// 			setScrolled(false);
-	// 		}
-	// 	};
-
-	// 	window.addEventListener("scroll", handleScroll);
-
-	// 	return () => {
-	// 		window.removeEventListener("scroll", handleScroll);
-	// 	};
-	// }, []);
-	useEffect(() => {
-		const handleScroll = () => {
-			const scrollPosition = window.scrollY;
-
-			// Verificar qué sección está visible en el scroll
-			const activeLink = LINKS.find(({ route }) => {
-				const sectionId = route.substring(2); // Eliminar los primeros dos caracteres de la ruta ("/#")
-				const element = document.getElementById(sectionId);
-
-				if (element) {
-					const offsetTop = element.offsetTop - 100; // Ajusta el valor para compensar el tamaño de la barra de navegación
-					const offsetBottom = offsetTop + element.offsetHeight;
-					return scrollPosition >= offsetTop && scrollPosition < offsetBottom;
-				}
-				return false;
-			});
-
-			if (activeLink) {
-				setActiveSection(activeLink.route);
-			} else {
-				setActiveSection("");
-			}
-
-			if (window.scrollY > 0) {
-				setScrolled(true);
-			} else {
-				setScrolled(false);
-			}
-		};
-
-		// Agregar el listener para el evento scroll
-		window.addEventListener("scroll", handleScroll);
-
-		// Limpiar el listener cuando el componente se desmonta
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
-
-	const toggleMenu = () => {
-		setMenuOpen(!isMenuOpen);
-	};
-
-	// useEffect(() => {
-	// 	const handleScroll = () => {
-	// 		const scrollPosition = window.scrollY;
-
-	// 		// Verificar qué sección está visible en el scroll
-	// 		const activeLink = LINKS.find(({ route }) => {
-	// 			const sectionId = route.substring(2); // Eliminar los primeros dos caracteres de la ruta ("/#")
-	// 			const element = document.getElementById(sectionId);
-
-	// 			if (element) {
-	// 				const offsetTop = element.offsetTop - 100; // Ajusta el valor para compensar el tamaño de la barra de navegación
-	// 				const offsetBottom = offsetTop + element.offsetHeight;
-	// 				return scrollPosition >= offsetTop && scrollPosition < offsetBottom;
-	// 			}
-	// 			return false;
-	// 		});
-
-	// 		if (activeLink) {
-	// 			setActiveSection(activeLink.route);
-	// 		} else {
-	// 			setActiveSection("");
-	// 		}
-	// 	};
-
-	// 	// Agregar el listener para el evento scroll
-	// 	window.addEventListener("scroll", handleScroll);
-
-	// 	// Limpiar el listener cuando el componente se desmonta
-	// 	return () => {
-	// 		window.removeEventListener("scroll", handleScroll());
-	// 	};
-	// }, []);
-
-	const handleScreenResize = () => {
-		setIsScreenSmall(window.innerWidth < 1000);
-	};
-
-	useEffect(() => {
-		// Check if window is defined before using it (for client-side rendering)
-		if (typeof window !== "undefined") {
-			setIsScreenSmall(window.innerWidth < 1000);
-
-			// Add event listener to handle screen resize on the client-side
-			window.addEventListener("resize", handleScreenResize);
-		}
-
-		// Remove the event listener when the component unmounts
-		return () => {
-			if (typeof window !== "undefined") {
-				window.removeEventListener("resize", handleScreenResize);
-			}
-		};
-	}, []);
+	const { isMenuOpen, activeSection, isScreenSmall, scrolled, toggleMenu } =
+		useNavigation();
 
 	return (
 		<nav
