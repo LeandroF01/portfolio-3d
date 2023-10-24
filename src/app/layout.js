@@ -7,9 +7,12 @@ import "./globals.css";
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<head></head>
+			<head>
+				<meta charset="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>Portafolio</title>
+			</head>
 			<body className="scroll-smooth bg-[#0D1117]">
-				<div className="noise"></div>
 				<header>
 					<Navbar />
 				</header>
