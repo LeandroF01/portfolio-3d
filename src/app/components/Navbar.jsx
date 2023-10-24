@@ -68,7 +68,7 @@ function Navbar() {
 						}`}></span>
 				</div>
 			</button>
-			<section className="flex max-lg:flex-col max-lg:justify-center  max-lg:gap-10 mx-auto max-lg:h-full max-lg:w-full max-lg:text-2xl  max-lg:my-10">
+			<ul className="flex max-lg:flex-col max-lg:justify-center  max-lg:gap-10 mx-auto max-lg:h-full max-lg:w-full max-lg:text-2xl  max-lg:my-10">
 				<div
 					className={`${
 						isMenuOpen
@@ -84,7 +84,7 @@ function Navbar() {
 						onClick={() => isScreenSmall && toggleMenu()}
 					/>
 				))}
-			</section>
+			</ul>
 		</nav>
 	);
 }
