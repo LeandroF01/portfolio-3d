@@ -29,11 +29,11 @@ function Home() {
 			className="flex items-center flex-col w-full h-screen overflow-hidden relative bg-home">
 			<Image
 				src={font}
-				width={900}
-				height={700}
+				width={700}
+				height={600}
 				loading="eager"
 				alt="img"
-				className="absolute -z-50 -top-60 -right-60 scale-up-center"
+				className="absolute -z-50 -top-60 -right-80 scale-up-center"
 			/>
 			<Image
 				src={font}
@@ -74,19 +74,24 @@ function Home() {
 			<section className="flex flex-col z-10 my-20 gap-2">
 				<ul className="flex justify-center items-center gap-1">
 					<li className=" w-full">
-						<a className="button__github" href="">
+						<a
+							className="button__github  text-white"
+							href="https://github.com/LeandroF01">
 							<Github color={"white"} width={20} height={20} />
 							Github
 						</a>
 					</li>
 					<li className=" w-full">
-						<a className="button__linkedin" href="">
+						<a
+							className="button__linkedin text-white"
+							href="https://www.linkedin.com/in/leandro-farias01/">
 							<Linkedin color={"white"} width={20} height={20} />
 							Linkedin
 						</a>
 					</li>
 				</ul>
 				<button
+					type="button"
 					onClick={handleButtonClick}
 					onMouseEnter={handleMouseEnter}
 					onMouseLeave={handleMouseLeave}
