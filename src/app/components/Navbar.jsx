@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import useNavigation from "../hooks/useNavigation";
-import Link from "next/link";
+import { NavLink } from "./NavLink";
 
 const LINKS = [
 	{
@@ -36,7 +36,7 @@ const LINKS = [
 
 function Navbar() {
 	const { isMenuOpen, activeSection, isScreenSmall, scrolled, toggleMenu } =
-		useNavigation();
+		useNavigation(LINKS);
 
 	return (
 		<nav
@@ -44,6 +44,7 @@ function Navbar() {
 				scrolled ? "bg-navbar" : ""
 			}`}>
 			<button
+				type="button"
 				className="absolute top-1 right-1 lg:hidden cursor-pointer focus:outline-none p-3 z-10"
 				onClick={toggleMenu}>
 				<div className="w-5 h-5 relative">
@@ -67,7 +68,7 @@ function Navbar() {
 						}`}></span>
 				</div>
 			</button>
-			<ul className="flex max-lg:flex-col max-lg:justify-center  max-lg:gap-10 mx-auto max-lg:h-full max-lg:w-full max-lg:text-2xl  max-lg:my-10">
+			<section className="flex max-lg:flex-col max-lg:justify-center  max-lg:gap-10 mx-auto max-lg:h-full max-lg:w-full max-lg:text-2xl  max-lg:my-10">
 				<div
 					className={`${
 						isMenuOpen
@@ -75,29 +76,15 @@ function Navbar() {
 							: ""
 					}`}></div>
 				{LINKS.map(({ label, route }, index) => (
-					<li
+					<NavLink
 						key={route}
-						className={` hover:text-white relative px-3 py-1 z-10  ${
-							activeSection === route
-								? "text-white font-semibold"
-								: "text-stone-400"
-						}`}
-						onClick={() => isScreenSmall && toggleMenu()}>
-						<Link
-							className={`cursor-pointer ${
-								isMenuOpen
-									? "opacity-0 animate-menuFadeIn"
-									: "delay-1000 animate-menuFadeOut max-lg:hidden"
-							}`}
-							href={route}
-							style={{
-								animationDelay: `${index * 0.1 + 0.4}s`,
-							}}>
-							{label}
-						</Link>
-					</li>
+						label={label}
+						route={route}
+						active={activeSection === route}
+						onClick={() => isScreenSmall && toggleMenu()}
+					/>
 				))}
-			</ul>
+			</section>
 		</nav>
 	);
 }

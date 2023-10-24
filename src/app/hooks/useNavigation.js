@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function useNavigation() {
+function useNavigation(LINKS) {
 	const [isMenuOpen, setMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("");
 
@@ -13,7 +13,7 @@ function useNavigation() {
 			const scrollPosition = window.scrollY;
 
 			// Verificar qué sección está visible en el scroll
-			const activeLink = LINKS.find(({ route }) => {
+			const activeLink = LINKS?.find(({ route }) => {
 				const sectionId = route.substring(2); // Eliminar los primeros dos caracteres de la ruta ("/#")
 				const element = document.getElementById(sectionId);
 
