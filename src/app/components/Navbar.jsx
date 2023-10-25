@@ -38,8 +38,6 @@ function Navbar() {
 	const { isMenuOpen, activeSection, isScreenSmall, scrolled, toggleMenu } =
 		useNavigation(LINKS);
 
-	console.log(activeSection);
-
 	return (
 		<nav
 			className={`flex items-center justify-between w-full h-12 z-10 fixed  ${

@@ -10,7 +10,7 @@ function Skills() {
 	});
 
 	const delayIncrement = 0.3;
-
+	isIntersecting ? "visible" : "hidden";
 	return (
 		<section
 			id="Skills"
@@ -22,6 +22,7 @@ function Skills() {
 						key={skill.name}
 						skill={skill}
 						delay={index * delayIncrement}
+						isIntersecting={isIntersecting}
 					/>
 				))}
 			</section>

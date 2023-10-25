@@ -3,7 +3,7 @@ import Image from "next/image";
 import skills from "../../json/skills.json";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-export const SkillItem = ({ skill, delay }) => {
+export const SkillItem = ({ skill, delay, isIntersecting }) => {
 	const [isHovered, setIsHovered] = useState(false);
 
 	const getAnimationClass = (position) => {
@@ -14,7 +14,9 @@ export const SkillItem = ({ skill, delay }) => {
 
 	return (
 		<article
-			className={`w-40 h-16 bg-experience relative rounded-md animate-slideBlur opacity-0 my-3`}
+			className={`w-40 h-16 bg-experience relative rounded-md ${
+				isIntersecting ? "animate-slideBlur" : "hidden"
+			} opacity-0 my-3`}
 			style={{
 				animationDelay: `${delay}s`,
 			}}
