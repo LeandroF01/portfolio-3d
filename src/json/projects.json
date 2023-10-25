@@ -3,7 +3,7 @@
         "id": 1,
         "title":  "E-commerce Inspirado en Nike con Vanilla JavaScript",
         "image":  "/img/01.png",
-        "description":  "Desarrollo de un sitio web de e-commerce completo con Vanilla JavaScript, demostrando habilidades en la creación de aplicaciones interactivas sin el uso de bibliotecas o frameworks. Implementación de un carrito de compras funcional utilizando LocalStorage para almacenar los datos del carrito, lo que mejora la experiencia del usuario y permite que los artículos se conserven incluso después de cerrar el navegador. Diseño responsive y moderno que se asemeja a la estética de la tienda de Nike, brindando una experiencia de compra atractiva y coherente con la marca.",
+        "description":  "Desarrollé un sitio web de e-commerce desde cero utilizando Vanilla JavaScript, lo que demuestra mi capacidad para crear aplicaciones interactivas sin el uso de bibliotecas o frameworks. Implementé un carrito de compras funcional que utiliza LocalStorage para conservar los artículos incluso después de cerrar el navegador. El diseño, inspirado en la estética de Nike, ofrece una experiencia de compra atractiva y coherente con la marca.",
         "github": "https://github.com/LeandroF01/E-commerce",
         "link": "https://ecommerecenikeejemplo.netlify.app/",
         "technologies": [{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
@@ -12,7 +12,7 @@
     "id": 2,
     "title":  "Tarjetas de Frases con Cambio de Fondo Aleatorio",
     "image":  "/img/02.png",
-    "description":  "Implementación de la función de geolocalización para determinar automáticamente la ubicación del usuario y mostrar datos climáticos relevantes sin necesidad de ingreso manual. Diseño intuitivo y amigable que facilita la visualización de la información climática, permitiendo a los usuarios obtener rápidamente los datos que necesitan. Integración de una API de pronóstico del clima, proporcionando pronósticos precisos y actualizados para mejorar la planificación diaria de los usuarios.",
+    "description":  "Implementé la geolocalización para mostrar automáticamente datos climáticos relevantes, lo que ofrece una experiencia sin necesidad de ingreso manual. Diseñé una interfaz intuitiva y amigable para la visualización de información climática. Además, integré una API de pronóstico del clima para proporcionar pronósticos precisos y actualizados que mejoran la planificación diaria.",
     "github": "https://github.com/LeandroF01/QuoteBox",
     "link": "https://statuesque-croquembouche-7d5b9a.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
@@ -21,7 +21,7 @@
     "id": 3,
     "title":  "Seguimiento de Criptomonedas en React",
     "image":  "/img/03.png",
-    "description":  "Implementación de una interfaz de facil navegación y la visualización de los datos de las criptomonedas. Uso efectivo de la API de CoinGecko para obtener datos en tiempo real, lo que proporciona a los usuarios información precisa y actualizada sobre las cotizaciones de las criptomonedas. Integración de una funcionalidad de búsqueda que permite a los usuarios encontrar rápidamente monedas específicas y obtener detalles detallados sobre ellas.",
+    "description":  "Diseñé una interfaz de fácil navegación para visualizar los datos de las criptomonedas. Utilicé eficazmente la API de CoinGecko para ofrecer a los usuarios información precisa y actualizada sobre las cotizaciones de las criptomonedas. Implementé una función de búsqueda que permite a los usuarios encontrar rápidamente monedas específicas y obtener detalles detallados.",
     "github": "https://github.com/LeandroF01/TableCoin",
     "link": "https://table-coin.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
@@ -31,7 +31,7 @@
     "id": 4,
     "title":  "Aplicación del Clima con Geolocalización",
     "image":  "/img/04.png",
-    "description":  "Implementación de la función de geolocalización para determinar automáticamente la ubicación del usuario y mostrar datos climáticos relevantes sin necesidad de ingreso manual. Diseño intuitivo y amigable que facilita la visualización de la información climática, permitiendo a los usuarios obtener rápidamente los datos que necesitan. Integración de una API de pronóstico del clima, proporcionando pronósticos precisos y actualizados para mejorar la planificación diaria de los usuarios.",
+    "description":  "Geolocalización para mostrar automáticamente datos climáticos relevantes sin necesidad de ingreso manual. Diseñé una interfaz intuitiva y amigable para la visualización de la información climática. Integré una API de pronóstico del clima para proporcionar pronósticos precisos y actualizados, mejorando así la planificación diaria.",
     "github": "https://github.com/LeandroF01/WeatherApp",
     "link": "https://wheater-app-temp.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
@@ -40,7 +40,7 @@
     "id": 5,
     "title":  "Rick and Morty Universe - Web de Personajes con Animación y Paginación",
     "image":   "/img/05.png",
-    "description":  "Desarrollo de una interfaz atractiva y fácil de usar, con animaciones CSS en las tarjetas de personajes que hacen que la experiencia de navegación sea entretenida y dinámica. Implementación de una búsqueda funcional que permite a los usuarios encontrar personajes específicos por nombre o información relevante. Uso de la API de Rick and Morty para obtener datos sobre los personajes, organizándolos por planetas aleatorios para brindar una experiencia de descubrimiento única. Creación de un sistema de paginación para dividir los personajes en grupos manejables, lo que agiliza la carga y mejora la experiencia de usuario.",
+    "description":  "Interfaz atractiva y de fácil uso con animaciones CSS en las tarjetas de personajes, lo que ofrece una experiencia de navegación entretenida y dinámica. Implementé una búsqueda funcional que permite a los usuarios encontrar personajes específicos por nombre o información relevante. Usé la API de Rick and Morty para organizar los personajes por planetas aleatorios, brindando una experiencia de descubrimiento única.",
     "github": "https://github.com/LeandroF01/rick-and-morty",
     "link": "https://rick-and-morty26.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]

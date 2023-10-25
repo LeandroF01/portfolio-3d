@@ -14,18 +14,19 @@ export default function Projects() {
 	const moveDiv = () => {
 		setIsHovered(!isHovered);
 	};
+	const reversedProjects = [...projects].reverse();
 
 	return (
 		<section
 			id="Projects"
 			className="flex justify-center items-center w-full h-full">
 			<section className="flex justify-center w-full h-full flex-wrap my-24">
-				{projects.map((project) => (
+				{reversedProjects.map((project) => (
 					<article key={project.id} className="w-80 rounded-2xl relative m-5">
 						<ul className="flex flex-col gap-1 absolute -right-3 top-4 z-10">
 							{project.technologies.map(({ url }, index) => (
 								<li
-									key={index}
+									key={url}
 									className="flex justify-center items-center hexagon w-7 h-7 bg-icons">
 									<Image src={url} width={15} height={15} alt={url} />
 								</li>
