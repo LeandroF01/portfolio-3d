@@ -1,20 +1,39 @@
-[
+
+  
+  
+  [
     {
-      "titulo": "Academlo",
+      "titulo": "Mills",
       "fecha": "MAY 2023",
-      "estado": "Finalizado",
-      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae perferendis veritatis ipsam tempora recusandae necessitatibus labore qui cumque earum, nisi dolorum sapiente aspernatur quam, cum reprehenderit alias debitis repellendus et."
+      "estado": "Actual",
+      "descripcion": {
+        "Resumen de Responsabilidades": "Desarrollador Full Stack",
+        "ResponsabilidadesDetalladas": [
+          "Identificación y resolución efectiva de errores y bugs en el sistema existente.",
+          "Desarrollo en colaboración de un módulo de acopio para el ingreso y egreso de materiales entre sucursales en March Desktop.",
+          "Colaboración en la creación de un sistema E-commerce, incluyendo el carrito de compras y el sistema de pago por Mercado Pago, y la sincronización de productos en línea.",
+          "Migración del sistema March Desktop a March Web y brindar una gama completa de servicios, incluyendo control de artículos, facturación electrónica y soporte a usuarios."
+        ]
+      }
+     
     },
     {
-      "titulo": "asdasd",
-      "fecha": "MAY 2023",
+      "titulo": "Frelancer",
+      "fecha": "AGO 2023",
       "estado": "Finalizado",
-      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae perferendis veritatis ipsam tempora recusandae necessitatibus labore qui cumque earum, nisi dolorum sapiente aspernatur quam, cum reprehenderit alias debitis repellendus et."
+      "descripcion": {
+        "Resumen de Responsabilidades": "Time Wise - App de reservaciones",
+        "ResponsabilidadesDetalladas": [
+          "Implementé un sistema de pago en línea con Mercado Pago para permitir a los usuarios realizar reservas de manera sencilla y segura.",
+          "Habilité a los administradores para gestionar días y horarios disponibles, así como servicios y sus tarifas.",
+          "Desarrollé un módulo de estadísticas que proporcionó información valiosa sobre el uso de la aplicación y las preferencias de los usuarios.",
+          "Implementé un sistema de cancelación de reservas a través de códigos proporcionados a los usuarios, mejorando la experiencia del cliente.",
+          "Configuré recordatorios automáticos de reservas a través de WhatsApp para recordar sus reservas."
+        ]
+      }
+     
     }
-  ]
-  
-  
-  
+  ] 
   
   
   

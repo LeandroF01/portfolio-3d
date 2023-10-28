@@ -49,7 +49,7 @@
     "id": 6,
     "title":  "Web de Pokémon con Animaciones, Paginación y Detalles de los Pokémon",
     "image":  "/img/06.png",
-    "description":  "Desarrollo de una página principal interactiva con animaciones de bienvenida que cautivan a los visitantes y los invitan a explorar la PokéDex. Implementación de una paginación eficiente que permite a los usuarios descubrir una amplia variedad de Pokémon sin problemas. Detalles completos de los Pokémon en cada tarjeta, incluidos el tipo, estadísticas y habilidades, proporcionando una visión detallada de cada criatura. Diseño responsivo que garantiza una experiencia de usuario óptima en dispositivos móviles y de escritorio.",
+    "description":  "Web interactiva con animaciones de bienvenida. Implementé una paginación eficiente para permitir a los usuarios descubrir una amplia variedad de Pokémon sin problemas. En cada tarjeta, proporcioné detalles completos de los Pokémon, incluyendo el tipo, estadísticas y habilidades.",
     "github": "https://github.com/LeandroF01/pokedex",
     "link": "https://pokedex-pokex.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
@@ -58,7 +58,7 @@
     "id": 7,
     "title":  "Juego del TaTeTi",
     "image": "/img/07.png",
-    "description":  "Implementación completa del juego del TaTeTi con lógica y reglas adecuadas para determinar el resultado de cada partida. Almacenamiento persistente de los resultados de los partidos en el LocalStorage, lo que permite que los jugadores continúen sus partidas incluso después de cerrar y volver a abrir la página. Diseño responsivo y amigable con animaciones suaves que hacen que el juego sea visualmente atractivo y fácil de jugar. Interfaz intuitiva y fácil de usar que permite a los jugadores disfrutar del juego sin problemas.",
+    "description":  ": Implementé un juego completo del TaTeTi con lógica y reglas adecuadas para determinar el resultado de cada partida. Los resultados de los partidos se almacenan de forma persistente en el LocalStorage, lo que permite a los jugadores continuar sus partidas incluso después de cerrar y volver a abrir la página. Diseñé una interfaz responsiva y amigable con animaciones suaves que hacen que el juego sea visualmente atractivo y fácil de jugar.",
     "github": "https://github.com/LeandroF01/tateti",
     "link": "https://tateti-react.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
@@ -67,7 +67,7 @@
     "id": 8,
     "title":  "E-commerce con React, Redux y React Router",
     "image":   "/img/08.png",
-    "description":  "Implementación de un sistema de autenticación seguro que permite a los usuarios registrarse, iniciar sesión y acceder a las funciones de compra. Carrito de compra totalmente funcional que permite a los usuarios agregar y eliminar productos antes de finalizar su compra. Detalle de productos con información completa, como imágenes, descripciones y precios, proporcionando una visión detallada de cada artículo. Historial de compras que muestra a los usuarios sus pedidos anteriores, lo que facilita el seguimiento de sus transacciones. Filtros en la página de productos para una navegación eficiente, lo que permite a los usuarios encontrar rápidamente los productos que desean.",
+    "description":  "Sistema de autenticación seguro que permite a los usuarios registrarse, iniciar sesión y acceder a las funciones de compra. Diseñé un carrito de compra totalmente funcional que permite a los usuarios agregar y eliminar productos antes de finalizar su compra. Además, proporcioné detalles completos de productos, incluyendo imágenes, descripciones y precios. También implementé un historial de compras y filtros en la página de productos para una navegación eficiente.",
     "github": "https://github.com/LeandroF01/e-commerce-react",
     "link": "https://e-commerce-react-it.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
