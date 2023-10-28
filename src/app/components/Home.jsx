@@ -33,7 +33,7 @@ function Home() {
 				height={600}
 				loading="eager"
 				alt="img"
-				className="absolute -z-50 -top-60 -right-80 scale-up-center"
+				className="absolute -z-50 -top-60 max-lg:-top-10 max-lg:-right-25 -right-80 scale-up-center"
 			/>
 			<Image
 				src={font}
@@ -41,14 +41,14 @@ function Home() {
 				height={400}
 				loading="eager"
 				alt="img"
-				className="absolute -z-50 -bottom-10 -left-12 scale-up-center2"
+				className="absolute -z-50 -bottom-10 -left-12 max-lg:-bottom-16 max-lg:-left-36 scale-up-center2"
 			/>
 			<div className="flex">
 				<h1 className="gap-8 mt-28 relative animate-textKA font-poppins dark:text-white text-pro-w-black font-bold md:text-[64px] md:leading-[70px] text-[40px] leading-[46px] tracking-[-0.5%] text-center">
 					{letter1.map((letter, index) => (
 						<span
 							key={index}
-							className="inline-block"
+							className="inline-block max-lg:text-4xl"
 							style={{
 								animationDelay: `${index * delayIncrement}s`,
 							}}>
@@ -64,7 +64,7 @@ function Home() {
 							style={{
 								animationDelay: `${letter2Delay + index * delayIncrement}s`,
 							}}
-							className="bg-gradient-to-r text-white text-transparent bg-clip-text inline-block">
+							className="bg-gradient-to-r text-white text-transparent bg-clip-text inline-block max-lg:text-3xl">
 							{letter}
 						</span>
 					))}

@@ -35,19 +35,28 @@ function About() {
 							alt="Picture of the author"
 						/>
 					</div>
-					<h2 className="my-4 font-extrabold text-lg">ABOUT ME</h2>
-					<p className="text-text-parraf text-base">
-						+1 year as a Front-End Web Developer. I have strong knowledge of
-						languages such as JavaScript, TypeScript, HTML, CSS, SASS,
-						frameworks like ReactJs and Tailwind, and experience in Back-End
-						development with NodeJs. Committed to the success of the company, I
-						work collaboratively to achieve established goals. I can also
-						provide innovative and high-quality solutions that enhance your
-						online presence.
+					<h2 className="my-4 font-bold text-xl">SOBRE MI</h2>
+					<p className="flex flex-col gap-4 text-sm max-lg:text-xs">
+						<p className="text-text-parraf">
+							Soy un apasionado diseñador y desarrollador web con una amplia
+							experiencia en la creación de soluciones visuales y funcionales.
+							Mi enfoque se centra en la creación de experiencias digitales
+							excepcionales y la resolución de problemas en el desarrollo web. A
+							lo largo de mi trayectoria, he tenido la oportunidad de trabajar
+							en proyectos desafiantes que han mejorado mi conjunto de
+							habilidades y perspicacia.
+						</p>
+						<p className="text-text-parraf">
+							Actualmente, estoy expandiendo mi conocimiento y habilidades como
+							desarrollador en tecnologías .NET. Mi objetivo es seguir
+							evolucionando como desarrollador front-end y contribuir a
+							proyectos que desafíen mis habilidades y fomenten mi crecimiento
+							profesional.
+						</p>
 					</p>
 				</div>
 
-				<div className="back absolute w-full h-[380px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] top-2 skew-y-6 translate-y-6"></div>
+				<div className="back absolute w-full h-[380px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] max-lg:-top-1 top-1 skew-y-6 translate-y-6"></div>
 			</article>
 		</section>
 	);

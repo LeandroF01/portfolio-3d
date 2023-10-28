@@ -75,7 +75,12 @@ function Navbar() {
 						? "circle absolute top-[-40px] right-[-40px] w-[70px] h-[70px] rounded-bl-full bg-[#0D1117] animate-circleAnimation overflow-hidden  z-1"
 						: ""
 				}`}></div>
-			<ul className="flex justify-center max-lg:flex-col max-lg:justify-center w-full max-lg:text-xl max-lg:fixed max-lg:top-24  max-lg:left-6 ">
+			<ul
+				className={`flex justify-center w-full ${
+					isMenuOpen
+						? "max-lg:flex-col max-lg:justify-center max-lg:text-xl max-lg:fixed max-lg:top-24 max-lg:left-6"
+						: ""
+				} `}>
 				{LINKS.map(({ label, route }, index) => (
 					<NavLink
 						index={index}
