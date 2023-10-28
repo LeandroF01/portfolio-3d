@@ -13,14 +13,14 @@ function Experience() {
 		<section
 			id="Experience"
 			ref={targetRef}
-			className="flex flex-col justify-center items-center w-full h-screen ">
+			className="flex justify-center items-center flex-col w-full h-full ">
 			<h2>Experience</h2>
 
 			<section
-				className={`flex justify-center items-center flex-col max-w-[600px] h-full relative animate-slideInUp ${
+				className={`flex flex-col max-w-[520px] h-full relative animate-slideInUp mx-4 ${
 					isIntersecting ? "visible" : "hidden"
 				}`}>
-				<div className="border-l-2 border-dashed absolute h-1/2  max-lg:left-0"></div>
+				<div className="border-l-2 border-dashed absolute h-full left-0 max-lg:left-2"></div>
 
 				{experiences.map((experience, index) => (
 					<ExperienceItem
