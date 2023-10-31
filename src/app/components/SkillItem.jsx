@@ -17,9 +17,6 @@ export const SkillItem = ({ skill, delay, isIntersecting }) => {
 			className={`w-40 h-16 bg-experience relative rounded-md ${
 				isIntersecting ? "animate-slideBlur" : "hidden"
 			} opacity-0 my-3`}
-			style={{
-				animationDelay: `${delay}s`,
-			}}
 			onMouseOver={() => setIsHovered(true)}
 			onMouseOut={() => setIsHovered(false)}>
 			<div

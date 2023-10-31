@@ -11,7 +11,7 @@ function useHome() {
 		.split("")
 		.map((letter) => (letter === " " ? "\u00A0" : letter));
 
-	const delayIncrement = 0.1;
+	const delayIncrement = 0.03;
 	const letter2Delay = letter1.length * delayIncrement;
 
 	const [scale, setScale] = useState(

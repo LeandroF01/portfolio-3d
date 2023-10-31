@@ -6,16 +6,16 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
 function Skills() {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
-		threshold: 0.5,
+		threshold: 0.3,
 	});
 
-	const delayIncrement = 0.3;
+	const delayIncrement = 0.03;
 	isIntersecting ? "visible" : "hidden";
 	return (
 		<section
 			id="Skills"
 			ref={targetRef}
-			className="w-full h-screen flex justify-center items-center  snap-start">
+			className="w-full h-screen flex justify-center items-center">
 			<section className="max-w-[640px] flex justify-center items-center flex-wrap">
 				{skills.map((skill, index) => (
 					<SkillItem

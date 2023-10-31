@@ -6,14 +6,14 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
 
 function Contact() {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
-		threshold: 0.5,
+		threshold: 0.3,
 	});
 
 	return (
 		<section
 			id="Contact"
 			ref={targetRef}
-			className="flex justify-center items-center gap-1 h-screen  snap-start">
+			className="flex justify-center items-center gap-1 h-screen ">
 			<div
 				className={`flex min-h-[500px] max-md:flex-col-reverse animate-slideInDown ${
 					isIntersecting ? "" : "hidden"
