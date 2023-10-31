@@ -1,9 +1,15 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
-
+import Loader from "./components/Loader";
+import useIntersectionObserver from "./hooks/useIntersectionObserver.js";
 const DynamicHome = dynamic(() => import("./components/Home"), {
 	ssr: false,
+	loading: () => (
+		<section className="w-full h-screen flex justify-center items-center">
+			<Loader />
+		</section>
+	),
 });
 const DynamicAbout = dynamic(() => import("./components/About"), {
 	ssr: false,
@@ -19,13 +25,19 @@ const DynamicContact = dynamic(() => import("./components/Contact"), {
 });
 
 export default function Page() {
+	const [targetRef, isIntersecting] = useIntersectionObserver({
+		threshold: 0.01,
+	});
 	return (
-		<>
-			<DynamicHome />
+		<section>
+			<section ref={targetRef}>
+				<DynamicHome />
+			</section>
+
 			<DynamicAbout />
 			<DynamicExperience />
 			<DynamicSkills />
 			<DynamicContact />
-		</>
+		</section>
 	);
 }

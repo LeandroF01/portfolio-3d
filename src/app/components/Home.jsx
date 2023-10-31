@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
 import Image from "next/image";
-
 import font from "../../assets/bg-security-upper-mg.svg";
 import { Cv, DownArrow, Checked } from "./Icons/Download";
 import { Github } from "./Icons/Github";
