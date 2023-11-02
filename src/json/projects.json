@@ -8,68 +8,68 @@
         "link": "https://ecommerecenikeejemplo.netlify.app/",
         "technologies": [{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
       },
-    {   
-    "id": 2,
-    "title":  "Tarjetas de Frases con Cambio de Fondo Aleatorio",
-    "image":  "/img/02.png",
-    "description":  "Implementé la geolocalización para mostrar automáticamente datos climáticos relevantes, lo que ofrece una experiencia sin necesidad de ingreso manual. Diseñé una interfaz intuitiva y amigable para la visualización de información climática. Además, integré una API de pronóstico del clima para proporcionar pronósticos precisos y actualizados que mejoran la planificación diaria.",
-    "github": "https://github.com/LeandroF01/QuoteBox",
-    "link": "https://statuesque-croquembouche-7d5b9a.netlify.app/",
-    "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
-  },
-    {   
-    "id": 3,
-    "title":  "Seguimiento de Criptomonedas en React",
-    "image":  "/img/03.png",
-    "description":  "Diseñé una interfaz de fácil navegación para visualizar los datos de las criptomonedas. Utilicé eficazmente la API de CoinGecko para ofrecer a los usuarios información precisa y actualizada sobre las cotizaciones de las criptomonedas. Implementé una función de búsqueda que permite a los usuarios encontrar rápidamente monedas específicas y obtener detalles detallados.",
-    "github": "https://github.com/LeandroF01/TableCoin",
-    "link": "https://table-coin.netlify.app/",
-    "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
-  },
-
+  
   {   
-    "id": 4,
+    "id": 2,
     "title":  "Aplicación del Clima con Geolocalización",
-    "image":  "/img/04.png",
+    "image":  "/img/02.png",
     "description":  "Geolocalización para mostrar automáticamente datos climáticos relevantes sin necesidad de ingreso manual. Diseñé una interfaz intuitiva y amigable para la visualización de la información climática. Integré una API de pronóstico del clima para proporcionar pronósticos precisos y actualizados, mejorando así la planificación diaria.",
     "github": "https://github.com/LeandroF01/WeatherApp",
     "link": "https://wheater-app-temp.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
   },
   {   
-    "id": 5,
+    "id": 3,
     "title":  "Rick and Morty Universe - Web de Personajes con Animación y Paginación",
-    "image":   "/img/05.png",
+    "image":   "/img/03.png",
     "description":  "Interfaz atractiva y de fácil uso con animaciones CSS en las tarjetas de personajes, lo que ofrece una experiencia de navegación entretenida y dinámica. Implementé una búsqueda funcional que permite a los usuarios encontrar personajes específicos por nombre o información relevante. Usé la API de Rick and Morty para organizar los personajes por planetas aleatorios, brindando una experiencia de descubrimiento única.",
     "github": "https://github.com/LeandroF01/rick-and-morty",
     "link": "https://rick-and-morty26.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
   },
   {   
-    "id": 6,
+    "id": 4,
     "title":  "Web de Pokémon con Animaciones, Paginación y Detalles de los Pokémon",
-    "image":  "/img/06.png",
+    "image":  "/img/04.png",
     "description":  "Web interactiva con animaciones de bienvenida. Implementé una paginación eficiente para permitir a los usuarios descubrir una amplia variedad de Pokémon sin problemas. En cada tarjeta, proporcioné detalles completos de los Pokémon, incluyendo el tipo, estadísticas y habilidades.",
     "github": "https://github.com/LeandroF01/pokedex",
     "link": "https://pokedex-pokex.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
   },
   {   
-    "id": 7,
+    "id": 5,
     "title":  "Juego del TaTeTi",
-    "image": "/img/07.png",
+    "image": "/img/05.png",
     "description":  ": Implementé un juego completo del TaTeTi con lógica y reglas adecuadas para determinar el resultado de cada partida. Los resultados de los partidos se almacenan de forma persistente en el LocalStorage, lo que permite a los jugadores continuar sus partidas incluso después de cerrar y volver a abrir la página. Diseñé una interfaz responsiva y amigable con animaciones suaves que hacen que el juego sea visualmente atractivo y fácil de jugar.",
     "github": "https://github.com/LeandroF01/tateti",
     "link": "https://tateti-react.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
   },
   {   
-    "id": 8,
+    "id": 6,
     "title":  "E-commerce con React, Redux y React Router",
-    "image":   "/img/08.png",
+    "image":   "/img/06.png",
     "description":  "Sistema de autenticación seguro que permite a los usuarios registrarse, iniciar sesión y acceder a las funciones de compra. Diseñé un carrito de compra totalmente funcional que permite a los usuarios agregar y eliminar productos antes de finalizar su compra. Además, proporcioné detalles completos de productos, incluyendo imágenes, descripciones y precios. También implementé un historial de compras y filtros en la página de productos para una navegación eficiente.",
     "github": "https://github.com/LeandroF01/e-commerce-react",
     "link": "https://e-commerce-react-it.netlify.app/",
+    "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
+  },
+  {   
+    "id": 7,
+    "title":  "Ajedrez",
+    "image":  "/img/07.png",
+    "description":  "Implementé la geolocalización para mostrar automáticamente datos climáticos relevantes, lo que ofrece una experiencia sin necesidad de ingreso manual. Diseñé una interfaz intuitiva y amigable para la visualización de información climática. Además, integré una API de pronóstico del clima para proporcionar pronósticos precisos y actualizados que mejoran la planificación diaria.",
+    "github": "https://github.com/LeandroF01/QuoteBox",
+    "link": "https://statuesque-croquembouche-7d5b9a.netlify.app/",
+    "technologies": [{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
+  },
+    {   
+    "id": 8,
+    "title":  "Hackathon de Infojobs",
+    "image":  "/img/08.png",
+    "description":  "Diseñé una interfaz de fácil navegación para visualizar los datos de las criptomonedas. Utilicé eficazmente la API de CoinGecko para ofrecer a los usuarios información precisa y actualizada sobre las cotizaciones de las criptomonedas. Implementé una función de búsqueda que permite a los usuarios encontrar rápidamente monedas específicas y obtener detalles detallados.",
+    "github": "https://github.com/LeandroF01/TableCoin",
+    "link": "https://table-coin.netlify.app/",
     "technologies": [{"color":"icons/react.svg", "url":"icons/react.svg"},{"color":"JavaScript", "url":"icons/javascript.svg"},{"color":"icons/css-3.svg", "url":"icons/css-3.svg"},{"color":"icons/html-5.svg", "url":"icons/html-5.svg"}]
   }
 ]
