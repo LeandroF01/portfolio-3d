@@ -3,7 +3,7 @@ import Image from "next/image";
 import skills from "../../json/skills.json";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
-export const SkillItem = ({ skill, delay, isIntersecting }) => {
+export const SkillItem = ({ skill, isIntersecting }) => {
 	const [isHovered, setIsHovered] = useState(false);
 
 	const getAnimationClass = (position) => {

@@ -46,7 +46,7 @@ function Home() {
 					{letter1.map((letter, index) => (
 						<span
 							key={index}
-							className="inline-block max-lg:text-4xl"
+							className="inline-block max-lg:text-3xl"
 							style={{
 								animationDelay: `${index * delayIncrement}s`,
 							}}>
@@ -62,7 +62,7 @@ function Home() {
 							style={{
 								animationDelay: `${letter2Delay + index * delayIncrement}s`,
 							}}
-							className="bg-gradient-to-r text-white text-transparent bg-clip-text inline-block max-lg:text-3xl">
+							className="bg-gradient-to-r text-white text-transparent bg-clip-text inline-block max-lg:text-2xl">
 							{letter}
 						</span>
 					))}

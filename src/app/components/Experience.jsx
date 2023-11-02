@@ -13,7 +13,7 @@ function Experience() {
 		<section
 			id="Experience"
 			ref={targetRef}
-			className="flex justify-center items-center flex-col w-full h-full ">
+			className="flex justify-center items-center flex-col w-full min-h-screen my-14">
 			<section
 				className={`flex flex-col max-w-[520px] h-full relative animate-slideInUp mx-4 ${
 					isIntersecting ? "visible" : "hidden"

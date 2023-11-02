@@ -13,7 +13,7 @@ function Contact() {
 		<section
 			id="Contact"
 			ref={targetRef}
-			className="flex justify-center items-center gap-1 h-screen ">
+			className="flex justify-center items-center gap-1 min-h-screen">
 			<div
 				className={`flex min-h-[500px] max-md:flex-col-reverse animate-slideInDown ${
 					isIntersecting ? "" : "hidden"

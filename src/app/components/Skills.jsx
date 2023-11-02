@@ -9,19 +9,16 @@ function Skills() {
 		threshold: 0.3,
 	});
 
-	const delayIncrement = 0.03;
-	isIntersecting ? "visible" : "hidden";
 	return (
 		<section
 			id="Skills"
 			ref={targetRef}
-			className="w-full h-screen flex justify-center items-center">
+			className="flex justify-center items-center w-full min-h-screen ">
 			<section className="max-w-[640px] flex justify-center items-center flex-wrap">
 				{skills.map((skill, index) => (
 					<SkillItem
 						key={skill.name}
 						skill={skill}
-						delay={index * delayIncrement}
 						isIntersecting={isIntersecting}
 					/>
 				))}
