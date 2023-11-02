@@ -18,7 +18,7 @@ function useNavigation(LINKS) {
 				const element = document.getElementById(sectionId);
 
 				if (element) {
-					const offsetTop = element.offsetTop - 100; // Ajusta el valor para compensar el tamaño de la barra de navegación
+					const offsetTop = element.offsetTop - 200; // Ajusta el valor para compensar el tamaño de la barra de navegación
 					const offsetBottom = offsetTop + element.offsetHeight;
 					return scrollPosition >= offsetTop && scrollPosition < offsetBottom;
 				}
@@ -47,6 +47,22 @@ function useNavigation(LINKS) {
 		};
 	}, []);
 
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			setIsScreenSmall(window.innerWidth < 1000);
+
+			const handleScreenResize = () => {
+				setIsScreenSmall(window.innerWidth < 1000);
+			};
+
+			window.addEventListener("resize", handleScreenResize);
+
+			return () => {
+				window.removeEventListener("resize", handleScreenResize);
+			};
+		}
+	}, []);
+
 	const toggleMenu = () => {
 		setMenuOpen(!isMenuOpen);
 	};
@@ -54,20 +70,6 @@ function useNavigation(LINKS) {
 	const handleScreenResize = () => {
 		setIsScreenSmall(window.innerWidth < 1000);
 	};
-
-	useEffect(() => {
-		if (typeof window !== "undefined") {
-			setIsScreenSmall(window.innerWidth < 1000);
-
-			window.addEventListener("resize", handleScreenResize);
-		}
-
-		return () => {
-			if (typeof window !== "undefined") {
-				window.removeEventListener("resize", handleScreenResize);
-			}
-		};
-	}, []);
 
 	return {
 		isMenuOpen,
