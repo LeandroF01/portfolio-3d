@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const ExperienceItem = ({ experience, index, isIntersecting }) => {
 	function selectSlide(num) {
 		return;
 	}
+
+	const [showImages, setShowImages] = useState(false);
+
+	const toggleView = () => {
+		setShowImages((prevShowImages) => !prevShowImages);
+	};
 	return (
 		<article
 			key={experience.titulo}
@@ -21,7 +27,47 @@ export const ExperienceItem = ({ experience, index, isIntersecting }) => {
 					<span className="text-gray-400">{experience.estado}</span>
 				</div>
 			</header>
-			<section className="flex flex-col text-sm  max-lg:text-xs text-gray-300 mx-5 gap-2">
+
+			<section className="flex flex-col text-sm max-lg:text-xs text-gray-300 mx-5 gap-2">
+				{showImages ? (
+					<div className="flex justify-center items-center bg-red-600">
+						{experience.descripcion.ResponsabilidadesDetalladas.map(
+							(image, index) => (
+								<div key={index}>aa</div>
+								// <img
+								// 	key={index}
+								// 	src={image}
+								// 	alt={`Responsibility ${index}`}
+								// 	className="max-w-full max-h-[200px] object-cover"
+								// />
+							)
+						)}
+					</div>
+				) : (
+					<>
+						<p className="text-white">
+							{experience.descripcion["Resumen de Responsabilidades"]}
+						</p>
+						<ul className="flex flex-col justify-center items-center gap-2">
+							{experience.descripcion.ResponsabilidadesDetalladas.map(
+								(logro, i) => (
+									<li key={i}>{logro}</li>
+								)
+							)}
+						</ul>
+					</>
+				)}
+
+				<div className="flex justify-center mt-4">
+					<button
+						onClick={toggleView}
+						className="bg-blue-500 text-white px-4 py-2 rounded-md">
+						{showImages ? "Ver Texto" : "Ver Imágenes"}
+					</button>
+				</div>
+			</section>
+			{/* <section className="flex flex-col text-sm  max-lg:text-xs text-gray-300 mx-5 gap-2">
+			
 				<p className="text-white">
 					{experience.descripcion["Resumen de Responsabilidades"]}
 				</p>
@@ -32,7 +78,7 @@ export const ExperienceItem = ({ experience, index, isIntersecting }) => {
 						)
 					)}
 				</ul>
-			</section>
+			</section> */}
 			<div className="absolute w-48 h-[1px] bottom-0 left-[50%] -translate-x-1/2 bg-border-gradiant"></div>
 		</article>
 	);
