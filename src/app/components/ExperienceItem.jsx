@@ -1,14 +1,26 @@
 import React, { useState } from "react";
-
+import Image from "next/image";
 export const ExperienceItem = ({ experience, index, isIntersecting }) => {
 	function selectSlide(num) {
 		return;
 	}
 
 	const [showImages, setShowImages] = useState(false);
+	const [currentSlide, setCurrentSlide] = useState(0);
 
 	const toggleView = () => {
 		setShowImages((prevShowImages) => !prevShowImages);
+	};
+
+	const nextSlide = () => {
+		setCurrentSlide((prevSlide) => (prevSlide + 1) % experience.images.length);
+	};
+
+	const prevSlide = () => {
+		setCurrentSlide(
+			(prevSlide) =>
+				(prevSlide - 1 + experience.images.length) % experience.images.length
+		);
 	};
 	return (
 		<article
@@ -30,18 +42,16 @@ export const ExperienceItem = ({ experience, index, isIntersecting }) => {
 
 			<section className="flex flex-col text-sm max-lg:text-xs text-gray-300 mx-5 gap-2">
 				{showImages ? (
-					<div className="flex justify-center items-center bg-red-600">
-						{experience.descripcion.ResponsabilidadesDetalladas.map(
-							(image, index) => (
-								<div key={index}>aa</div>
-								// <img
-								// 	key={index}
-								// 	src={image}
-								// 	alt={`Responsibility ${index}`}
-								// 	className="max-w-full max-h-[200px] object-cover"
-								// />
-							)
-						)}
+					<div className="flex justify-center items-center ">
+						{/* Mostrar solo la imagen actual */}
+						<div>
+							<Image
+								src={experience.images[currentSlide]}
+								width={500}
+								height={420}
+								alt=""
+							/>
+						</div>
 					</div>
 				) : (
 					<>
@@ -65,6 +75,22 @@ export const ExperienceItem = ({ experience, index, isIntersecting }) => {
 						{showImages ? "Ver Texto" : "Ver Imágenes"}
 					</button>
 				</div>
+
+				{/* Agregar controles del slider */}
+				{showImages && experience.images.length > 1 && (
+					<div className="flex justify-center mt-4">
+						<button
+							onClick={prevSlide}
+							className="bg-blue-500 text-white px-2 py-1 rounded-md mr-2">
+							Anterior
+						</button>
+						<button
+							onClick={nextSlide}
+							className="bg-blue-500 text-white px-2 py-1 rounded-md">
+							Siguiente
+						</button>
+					</div>
+				)}
 			</section>
 			{/* <section className="flex flex-col text-sm  max-lg:text-xs text-gray-300 mx-5 gap-2">
 			
