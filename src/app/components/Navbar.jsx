@@ -34,6 +34,37 @@ const LINKS = [
 	},
 ];
 
+const ENLACES = [
+	{
+		label: "Inicio",
+		route: "/#Inicio",
+	},
+	{
+		label: "Acerca de mí",
+		route: "/#Acerca-de-mi",
+	},
+	{
+		label: "Experiencia",
+		route: "/#Experiencia",
+	},
+	{
+		label: "Proyectos",
+		route: "/Proyectos",
+	},
+	{
+		label: "Habilidades",
+		route: "/#Habilidades",
+	},
+	{
+		label: "Blog",
+		route: "/Blog",
+	},
+	{
+		label: "Contacto",
+		route: "/#Contacto",
+	},
+];
+
 function Navbar() {
 	const { isMenuOpen, activeSection, isScreenSmall, scrolled, toggleMenu } =
 		useNavigation(LINKS);
@@ -69,6 +100,17 @@ function Navbar() {
 						}`}></span>
 				</div>
 			</button>
+
+			{/* <div className="checkbox-wrapper-10">
+				<input checked="" type="checkbox" id="cb5" className="tgl tgl-flip" />
+				<label
+					for="cb5"
+					data-tg-on="On"
+					data-tg-off="Off"
+					className="tgl-btn"></label>
+			</div> */}
+			<input type="checkbox" class="theme-checkbox" />
+
 			<div
 				className={`${
 					isMenuOpen
