@@ -1,0 +1,17 @@
+{
+    "home": {
+      "text1": "Hello, I'm Leandro Farias",
+      "text2": "Front-End Developer"
+    },
+    "about": {
+      "title": "ABOUT ME",
+      "descripcion": "I am a passionate web designer and developer with extensive experience in creating visual and functional solutions. My focus is on creating exceptional digital experiences and solving problems in web development. Throughout my journey, I have had the opportunity to work on challenging projects that have enhanced my skill set and insight.",
+      "descripcion2": "Currently, I am expanding my knowledge and skills as a developer in .NET technologies. My goal is to continue evolving as a front-end developer and contribute to projects that challenge my skills and foster my professional growth."
+    },
+    "contact": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    }
+  }
+  
