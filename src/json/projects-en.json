@@ -1,0 +1,113 @@
+[
+    {
+      "id": 1,
+      "title": "Nike-Inspired E-commerce with Vanilla JavaScript",
+      "image": "/img/01.png",
+      "description": "Developed an e-commerce website from scratch using Vanilla JavaScript, showcasing the ability to create interactive applications without the use of libraries or frameworks. Implemented a functional shopping cart that uses LocalStorage to preserve items even after closing the browser. The design, inspired by Nike's aesthetic, offers an attractive and consistent shopping experience with the brand.",
+      "github": "https://github.com/LeandroF01/E-commerce",
+      "link": "https://nike-inspired-ecommerce-example.netlify.app/",
+      "technologies": [
+        {"color": "JavaScript", "url": "icons/javascript.svg"},
+        {"color": "icons/css-3.svg", "url": "icons/css-3.svg"},
+        {"color": "icons/html-5.svg", "url": "icons/html-5.svg"}
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Weather Application with Geolocation",
+      "image": "/img/02.png",
+      "description": "Geolocation to automatically display relevant weather data without manual input. Designed an intuitive and user-friendly interface for weather information visualization. Integrated a weather forecast API to provide accurate and updated forecasts, enhancing daily planning.",
+      "github": "https://github.com/LeandroF01/WeatherApp",
+      "link": "https://weather-app-demo.netlify.app/",
+      "technologies": [
+        {"color": "icons/react.svg", "url": "icons/react.svg"},
+        {"color": "JavaScript", "url": "icons/javascript.svg"},
+        {"color": "icons/css-3.svg", "url": "icons/css-3.svg"},
+        {"color": "icons/html-5.svg", "url": "icons/html-5.svg"}
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Rick and Morty Universe - Character Web with Animation and Pagination",
+      "image": "/img/03.png",
+      "description": "Attractive and user-friendly interface with CSS animations on character cards, providing an entertaining and dynamic browsing experience. Implemented functional search allowing users to find specific characters by name or relevant information. Used the Rick and Morty API to organize characters by random planets, offering a unique discovery experience.",
+      "github": "https://github.com/LeandroF01/rick-and-morty",
+      "link": "https://rick-and-morty26.netlify.app/",
+      "technologies": [
+        {"color": "icons/react.svg", "url": "icons/react.svg"},
+        {"color": "JavaScript", "url": "icons/javascript.svg"},
+        {"color": "icons/css-3.svg", "url": "icons/css-3.svg"},
+        {"color": "icons/html-5.svg", "url": "icons/html-5.svg"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Pokémon Web with Animations, Pagination, and Pokémon Details",
+      "image": "/img/04.png",
+      "description": "Interactive web with welcome animations. Implemented efficient pagination to allow users to discover a wide variety of Pokémon seamlessly. On each card, provided complete details of the Pokémon, including type, statistics, and abilities.",
+      "github": "https://github.com/LeandroF01/pokedex",
+      "link": "https://pokedex-pokex.netlify.app/",
+      "technologies": [
+        {"color": "icons/react.svg", "url": "icons/react.svg"},
+        {"color": "JavaScript", "url": "icons/javascript.svg"},
+        {"color": "icons/css-3.svg", "url": "icons/css-3.svg"},
+        {"color": "icons/html-5.svg", "url": "icons/html-5.svg"}
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Tic Tac Toe Game",
+      "image": "/img/05.png",
+      "description": "Implemented a complete Tic Tac Toe game with proper logic and rules to determine the result of each match. Match results are persistently stored in LocalStorage, allowing players to continue their games even after closing and reopening the page. Designed a responsive and user-friendly interface with smooth animations making the game visually appealing and easy to play.",
+      "github": "https://github.com/LeandroF01/tictactoe",
+      "link": "https://tateti-react.netlify.app/",
+      "technologies": [
+        {"color": "icons/react.svg", "url": "icons/react.svg"},
+        {"color": "JavaScript", "url": "icons/javascript.svg"},
+        {"color": "icons/css-3.svg", "url": "icons/css-3.svg"},
+        {"color": "icons/html-5.svg", "url": "icons/html-5.svg"}
+      ]
+    },
+    {
+      "id": 6,
+      "title": "E-commerce with React, Redux, and React Router",
+      "image": "/img/06.png",
+      "description": "Secure authentication system allowing users to register, log in, and access shopping features. Designed a fully functional shopping cart allowing users to add and remove products before completing their purchase. Additionally, provided complete product details, including images, descriptions, and prices. Also implemented a purchase history and filters on the product page for efficient navigation.",
+      "github": "https://github.com/LeandroF01/e-commerce-react",
+      "link": "https://e-commerce-react-it.netlify.app/",
+      "technologies": [
+        {"color": "icons/react.svg", "url": "icons/react.svg"},
+        {"color": "JavaScript", "url": "icons/javascript.svg"},
+        {"color": "icons/css-3.svg", "url": "icons/css-3.svg"},
+        {"color": "icons/html-5.svg", "url": "icons/html-5.svg"}
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Chess",
+      "image": "/img/07.png",
+      "description": "Developed an interactive chess game using Web Components and pure JavaScript. Each piece on the board has unique movements implemented, creating a realistic gaming experience. The custom board and movement logic provide an intuitive interface for players.",
+      "github": "https://github.com/LeandroF01/chess",
+      "link": "https://chess-y7f9-jahcxl1zj-leandrof01.vercel.app/",
+      "technologies": [
+        {"color": "icons/javascript.svg", "url": "icons/javascript.svg"},
+        {"color": "icons/css-3.svg", "url": "icons/css-3.svg"},
+        {"color": "icons/html-5.svg", "url": "icons/html-5.svg"}
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Infojobs Hackathon",
+      "image": "/img/08.png",
+      "description": "Participated in the Infojobs hackathon with the goal of enhancing the platform. Designed and implemented a system to validate professionals' skills through custom questions. Upon passing this assessment, the display of these skills on their profiles is enabled, providing recruiters with a more accurate insight into candidates' abilities.",
+      "github": "https://github.com/LeandroF01/infojobs-hackathon",
+      "link": "https://infojobs-questions.netlify.app/",
+      "technologies": [
+        {"color": "icons/react.svg", "url": "icons/react.svg"},
+        {"color": "icons/javascript.svg", "url": "icons/javascript.svg"},
+        {"color": "icons/css-3.svg", "url": "icons/css-3.svg"},
+        {"color": "icons/html-5.svg", "url": "icons/html-5.svg"}
+      ]
+    }
+  ]
+  
