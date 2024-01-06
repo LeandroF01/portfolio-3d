@@ -6,6 +6,7 @@ import { Cv, DownArrow, Checked } from "./Icons/Download";
 import { Github } from "./Icons/Github";
 import { Linkedin } from "./Icons/Linkedin";
 import useHome from "../hooks/useHome";
+
 function Home() {
 	const {
 		text1,
@@ -21,6 +22,7 @@ function Home() {
 		handleMouseEnter,
 		handleMouseLeave,
 	} = useHome();
+
 	return (
 		<section
 			id="Home"

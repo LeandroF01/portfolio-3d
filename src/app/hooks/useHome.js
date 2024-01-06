@@ -1,12 +1,18 @@
 import { useState, useEffect } from "react";
 
+import useLanguageStore from "../store/languageStore";
+import textES from "../../json/text-es.json";
+import textEN from "../../json/text-en.json";
+
 function useHome() {
-	const text1 = "Hello, I'm Leandro Farias";
+	const { language, setLanguage } = useLanguageStore();
+
+	const text1 = (language === "en" ? textEN : textES).home.text1;
 	const letter1 = text1
 		.split("")
 		.map((letter) => (letter === " " ? "\u00A0" : letter));
 
-	const text2 = "Front-End Developer";
+	const text2 = (language === "en" ? textEN : textES).home.text2;
 	const letter2 = text2
 		.split("")
 		.map((letter) => (letter === " " ? "\u00A0" : letter));

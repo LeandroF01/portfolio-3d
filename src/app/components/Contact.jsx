@@ -3,11 +3,16 @@ import React from "react";
 import Lottie from "lottie-react";
 import contact from "../../json/animation-contact.json";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
+import useLanguageStore from "../store/languageStore";
+import textES from "../../json/text-es.json";
+import textEN from "../../json/text-en.json";
 
 function Contact() {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
 		threshold: 0.3,
 	});
+
+	const { language, setLanguage } = useLanguageStore();
 
 	return (
 		<section
@@ -28,7 +33,7 @@ function Contact() {
 							<label
 								htmlFor="name"
 								className="block text-sm font-medium leading-6 text-white">
-								Name
+								{(language === "en" ? textEN : textES).contact.name}
 							</label>
 						</div>
 						<div className="mt-2">
@@ -45,7 +50,7 @@ function Contact() {
 						<label
 							htmlFor="email"
 							className="block text-sm font-medium leading-6 text-white">
-							Email address
+							{(language === "en" ? textEN : textES).contact.email}
 						</label>
 						<div className="mt-2">
 							<input
@@ -61,7 +66,7 @@ function Contact() {
 						<label
 							htmlFor="message"
 							className="block text-sm font-medium leading-6 text-white">
-							Message
+							{(language === "en" ? textEN : textES).contact.message}
 						</label>
 						<div className="mt-2">
 							<textarea

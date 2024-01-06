@@ -4,11 +4,15 @@ import Image from "next/image";
 import user from "../../assets/user.svg";
 import animation from "../../assets/animation-circle.svg";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
+import useLanguageStore from "../store/languageStore";
+import textES from "../../json/text-es.json";
+import textEN from "../../json/text-en.json";
 
 function About() {
 	const [targetRef, isIntersecting] = useIntersectionObserver({
 		threshold: 0.5, // Define el umbral de intersección (50% visible)
 	});
+	const { language, setLanguage } = useLanguageStore();
 
 	return (
 		<section
@@ -35,23 +39,15 @@ function About() {
 							alt="Picture of the author"
 						/>
 					</div>
-					<h2 className="my-4 font-bold text-xl">SOBRE MI</h2>
+					<h2 className="my-4 font-bold text-xl">
+						{(language === "en" ? textEN : textES).about.title}
+					</h2>
 					<p className="flex flex-col gap-4 text-sm max-lg:text-xs">
 						<p className="text-text-parraf">
-							Soy un apasionado diseñador y desarrollador web con una amplia
-							experiencia en la creación de soluciones visuales y funcionales.
-							Mi enfoque se centra en la creación de experiencias digitales
-							excepcionales y la resolución de problemas en el desarrollo web. A
-							lo largo de mi trayectoria, he tenido la oportunidad de trabajar
-							en proyectos desafiantes que han mejorado mi conjunto de
-							habilidades y perspicacia.
+							{(language === "en" ? textEN : textES).about.descripcion}
 						</p>
 						<p className="text-text-parraf">
-							Actualmente, estoy expandiendo mi conocimiento y habilidades como
-							desarrollador en tecnologías .NET. Mi objetivo es seguir
-							evolucionando como desarrollador front-end y contribuir a
-							proyectos que desafíen mis habilidades y fomenten mi crecimiento
-							profesional.
+							{(language === "en" ? textEN : textES).about.descripcion2}
 						</p>
 					</p>
 				</div>
