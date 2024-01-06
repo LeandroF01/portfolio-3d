@@ -2,6 +2,7 @@
 import React from "react";
 import useNavigation from "../hooks/useNavigation";
 import { NavLink } from "./NavLink";
+import useLanguageStore from "../store/languageStore";
 
 const LINKS = [
 	{
@@ -69,6 +70,13 @@ function Navbar() {
 	const { isMenuOpen, activeSection, isScreenSmall, scrolled, toggleMenu } =
 		useNavigation(LINKS);
 
+	const { language, setLanguage } = useLanguageStore();
+
+	const handleLanguageChange = () => {
+		const newLanguage = language === "en" ? "es" : "en";
+		setLanguage(newLanguage);
+	};
+
 	return (
 		<nav
 			className={`flex items-center justify-between w-full h-12 z-10 fixed  ${
@@ -109,7 +117,11 @@ function Navbar() {
 					data-tg-off="Off"
 					className="tgl-btn"></label>
 			</div> */}
-			<input type="checkbox" class="theme-checkbox" />
+			<input
+				type="checkbox"
+				class="theme-checkbox"
+				onChange={handleLanguageChange}
+			/>
 
 			<div
 				className={`${
