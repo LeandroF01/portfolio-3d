@@ -1,11 +1,11 @@
 [
     {
-      "title": "Mills",
-      "date": "MAY 2023",
-      "status": "Current",
-      "description": {
-        "Summary of Responsibilities": "Full Stack Developer",
-        "Detailed Responsibilities": [
+      "titulo": "Mills",
+      "fecha": "MAY 2023",
+      "estado": "Current",
+      "descripcion": {
+        "Resumen de Responsabilidades": "Full Stack Developer",
+        "ResponsabilidadesDetalladas": [
           "Identifying and effectively resolving errors and bugs in the existing system.",
           "Collaboratively developing a collection module for the input and output of materials between branches in March Desktop.",
           "Collaborating on the creation of an E-commerce system, including the shopping cart and the payment system through Mercado Pago, and the synchronization of products online.",
@@ -15,12 +15,12 @@
       "images": [ "/experience/01.png", "/experience/02.png", "/experience/03.png"]
     },
     {
-      "title": "Freelancer",
-      "date": "AUG 2023",
-      "status": "Completed",
-      "description": {
-        "Summary of Responsibilities": "Time Wise - Reservation App",
-        "Detailed Responsibilities": [
+      "titulo": "Freelancer",
+      "fecha": "AUG 2023",
+      "estado": "Completed",
+      "descripcion": {
+        "Resumen de Responsabilidades": "Time Wise - Reservation App",
+        "ResponsabilidadesDetalladas": [
           "Implemented an online payment system with Mercado Pago to allow users to make reservations easily and securely.",
           "Enabled administrators to manage available days and hours, as well as services and their rates.",
           "Developed a statistics module that provided valuable information about the usage of the application and user preferences.",

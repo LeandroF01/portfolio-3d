@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import projects from "../../json/projects.json";
-
 import { Github } from "../components/Icons/Github";
 import { NetLink } from "../components/Icons/NetLink";
+
+import useLanguageStore from "../store/languageStore";
+import projectsES from "../../json/projects.json";
+import projectsEN from "../../json/projects-en.json";
 
 export default function Projects() {
 	const [isHovered, setIsHovered] = useState(false);
@@ -14,7 +16,12 @@ export default function Projects() {
 	const moveDiv = () => {
 		setIsHovered(!isHovered);
 	};
-	const reversedProjects = [...projects].reverse();
+
+	const { language, setLanguage } = useLanguageStore();
+
+	const reversedProjects = [
+		...(language === "en" ? projectsEN : projectsES),
+	].reverse();
 
 	return (
 		<section
