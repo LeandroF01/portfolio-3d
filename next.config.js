@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	experimental: {
-		appDir: true,
+		// Elimina la siguiente línea, ya que `appDir` no es necesario
+		// appDir: true,
 	},
 	reactStrictMode: true,
 	async rewrites() {

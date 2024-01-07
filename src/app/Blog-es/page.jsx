@@ -1,29 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import blogs from "../store/blogStore";
 
 // eslint-disable-next-line react/prop-types
 export default function Blog() {
-	const root = process.cwd();
-	const dataPath = path.join(root, "src", "data");
-	const files = fs.readdirSync(dataPath);
-	const blogs = files.map((filename) => {
-		const filePath = path.join(dataPath, filename);
-		const fileContent = fs.readFileSync(filePath, "utf-8");
-		const { data: frontMatter } = matter(fileContent);
-		return {
-			meta: frontMatter,
-			slug: filename.replace(".mdx", ""),
-		};
-	});
+	const filteredBlogs = blogs.filter((blog) => blog.slug.endsWith("-es"));
 
 	return (
 		<section className="flex justify-center w-full">
 			<section className="flex justify-center items-center w-full h-full flex-wrap my-24 gap-6">
-				{blogs.map((post) => (
+				{filteredBlogs.map((post) => (
 					<article
 						key={post.slug}
 						className="flex justify-center items-center w-80 h-72 bg-animation rounded-tl-lg rounded-tr-lg relative overflow-hidden">
