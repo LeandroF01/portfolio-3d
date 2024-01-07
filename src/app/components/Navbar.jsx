@@ -1,39 +1,9 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useNavigation from "../hooks/useNavigation";
 import { NavLink } from "./NavLink";
 import useLanguageStore from "../store/languageStore";
-
-const LINKS = [
-	{
-		label: "Home",
-		route: "/#Home",
-	},
-	{
-		label: "About",
-		route: "/#About",
-	},
-	{
-		label: "Experience",
-		route: "/#Experience",
-	},
-	{
-		label: "Projects",
-		route: "/Projects",
-	},
-	{
-		label: "Skills",
-		route: "/#Skills",
-	},
-	{
-		label: "Blog",
-		route: "/Blog",
-	},
-	{
-		label: "Contact",
-		route: "/#Contact",
-	},
-];
+import { useRouter, usePathname } from "next/navigation";
 
 const ENLACES = [
 	{
@@ -67,15 +37,74 @@ const ENLACES = [
 ];
 
 function Navbar() {
+	const [links, setLinks] = useState([]);
 	const { isMenuOpen, activeSection, isScreenSmall, scrolled, toggleMenu } =
-		useNavigation(LINKS);
+		useNavigation(links);
 
 	const { language, setLanguage } = useLanguageStore();
+
+	const router = useRouter();
+
+	const pathname = usePathname();
+	console.log(pathname);
+
+	const prefix = "/Blogs/";
+
+	const blogPath = pathname.substring(pathname.indexOf(prefix) + prefix.length);
+
+	const blogLanguage = blogPath.split("-")[0];
 
 	const handleLanguageChange = () => {
 		const newLanguage = language === "en" ? "es" : "en";
 		setLanguage(newLanguage);
+		if (pathname.includes("Blogs")) {
+			console.log("si");
+			router.push(
+				pathname === `/Blogs/${blogLanguage}-es`
+					? `/Blogs/${blogLanguage}-en`
+					: `/Blogs/${blogLanguage}-es`
+			);
+		}
+
+		if (pathname.includes("/Blog") && !pathname.includes("Blogs")) {
+			router.push(pathname === "/Blog-es" ? "/Blog-en" : "/Blog-es");
+		}
 	};
+
+	useEffect(() => {
+		const LINKS = [
+			{
+				label: "Home",
+				route: "/#Home",
+			},
+			{
+				label: "About",
+				route: "/#About",
+			},
+			{
+				label: "Experience",
+				route: "/#Experience",
+			},
+			{
+				label: "Projects",
+				route: "/Projects",
+			},
+			{
+				label: "Skills",
+				route: "/#Skills",
+			},
+			{
+				label: "Blog",
+				route: `/Blog-${language === "en" ? "es" : "en"}`,
+			},
+			{
+				label: "Contact",
+				route: "/#Contact",
+			},
+		];
+
+		setLinks(LINKS);
+	}, [language]);
 
 	return (
 		<nav
@@ -135,7 +164,7 @@ function Navbar() {
 						? "max-lg:flex-col max-lg:justify-center max-lg:text-xl max-lg:fixed max-lg:top-24 max-lg:left-6"
 						: ""
 				} `}>
-				{LINKS.map(({ label, route }, index) => (
+				{links.map(({ label, route }, index) => (
 					<NavLink
 						index={index}
 						key={route}
