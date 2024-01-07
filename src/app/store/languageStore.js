@@ -1,10 +1,15 @@
 import { create } from "zustand";
 
 const useLanguageStore = create((set) => ({
-	language: localStorage.getItem("language") || "en",
+	language:
+		typeof window !== "undefined"
+			? localStorage.getItem("language") || "en"
+			: "en",
 	setLanguage: (newLanguage) => {
 		set({ language: newLanguage });
-		localStorage.setItem("language", newLanguage);
+		if (typeof window !== "undefined") {
+			localStorage.setItem("language", newLanguage);
+		}
 	},
 }));
 
