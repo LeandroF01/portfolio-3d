@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { Arrow } from "./Icons/Arrow";
+import textES from "../../json/text-es.json";
+import textEN from "../../json/text-en.json";
+import useLanguageStore from "../store/languageStore";
+
 export const ExperienceItem = ({ experience, index, isIntersecting }) => {
 	function selectSlide(num) {
 		return;
@@ -22,6 +27,7 @@ export const ExperienceItem = ({ experience, index, isIntersecting }) => {
 				(prevSlide - 1 + experience.images.length) % experience.images.length
 		);
 	};
+	const { language, setLanguage } = useLanguageStore();
 	return (
 		<article
 			key={experience.titulo}
@@ -71,23 +77,29 @@ export const ExperienceItem = ({ experience, index, isIntersecting }) => {
 				<div className="flex justify-center mt-4">
 					<button
 						onClick={toggleView}
-						className="bg-blue-500 text-white px-4 py-2 rounded-md">
-						{showImages ? "Ver Texto" : "Ver Imágenes"}
+						className="bg-zinc-800 text-white px-4 py-2 rounded-md">
+						{showImages
+							? language === "en"
+								? textEN.buttons.text
+								: textES.buttons.text
+							: language === "en"
+							? textEN.buttons.images
+							: textES.buttons.images}
 					</button>
 				</div>
 
 				{/* Agregar controles del slider */}
 				{showImages && experience.images.length > 1 && (
-					<div className="flex justify-center mt-4">
+					<div className="flex justify-center mt-4 gap-6">
 						<button
 							onClick={prevSlide}
-							className="bg-blue-500 text-white px-2 py-1 rounded-md mr-2">
-							Anterior
+							className="bg-zinc-800 text-white p-2 shadow-sm rounded-full rotate-180">
+							<Arrow width={15} height={15} color={"white"} />
 						</button>
 						<button
 							onClick={nextSlide}
-							className="bg-blue-500 text-white px-2 py-1 rounded-md">
-							Siguiente
+							className="bg-zinc-800 text-white p-2 shadow-sm rounded-full">
+							<Arrow width={15} height={15} color={"white"} />
 						</button>
 					</div>
 				)}

@@ -82,7 +82,7 @@ function Contact() {
 						<button
 							type="submit"
 							className="flex w-full justify-center rounded-md bg-gray-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-							Submit
+							{(language === "en" ? textEN : textES).buttons.submit}
 						</button>
 					</div>
 				</form>

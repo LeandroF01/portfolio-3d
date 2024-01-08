@@ -6,6 +6,9 @@ import { Cv, DownArrow, Checked } from "./Icons/Download";
 import { Github } from "./Icons/Github";
 import { Linkedin } from "./Icons/Linkedin";
 import useHome from "../hooks/useHome";
+import useLanguageStore from "../store/languageStore";
+import textES from "../../json/text-es.json";
+import textEN from "../../json/text-en.json";
 
 function Home() {
 	const {
@@ -22,6 +25,8 @@ function Home() {
 		handleMouseEnter,
 		handleMouseLeave,
 	} = useHome();
+
+	const { language, setLanguage } = useLanguageStore();
 
 	return (
 		<section
@@ -97,7 +102,7 @@ function Home() {
 					onMouseLeave={handleMouseLeave}
 					className={`flex flex-row justify-center items-center cursor-pointer rounded-md px-3 py-1 cssbuttons-io `}>
 					<span className="flex justify-center items-center gap-3">
-						Download
+						{(language === "en" ? textEN : textES).buttons.download}
 						{isClicked && (
 							<Checked color={"white"} width={"20px"} height={"20px"} />
 						)}
