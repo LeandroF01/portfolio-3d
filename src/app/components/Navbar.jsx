@@ -5,37 +5,6 @@ import { NavLink } from "./NavLink";
 import useLanguageStore from "../store/languageStore";
 import { useRouter, usePathname } from "next/navigation";
 
-const ENLACES = [
-	{
-		label: "Inicio",
-		route: "/#Inicio",
-	},
-	{
-		label: "Acerca de mí",
-		route: "/#Acerca-de-mi",
-	},
-	{
-		label: "Experiencia",
-		route: "/#Experiencia",
-	},
-	{
-		label: "Proyectos",
-		route: "/Proyectos",
-	},
-	{
-		label: "Habilidades",
-		route: "/#Habilidades",
-	},
-	{
-		label: "Blog",
-		route: "/Blog",
-	},
-	{
-		label: "Contacto",
-		route: "/#Contacto",
-	},
-];
-
 function Navbar() {
 	const [links, setLinks] = useState([]);
 	const { isMenuOpen, activeSection, isScreenSmall, scrolled, toggleMenu } =
@@ -70,6 +39,36 @@ function Navbar() {
 	};
 
 	useEffect(() => {
+		const ENLACES = [
+			{
+				label: "Inicio",
+				route: "/#Home",
+			},
+			{
+				label: "Acerca de mí",
+				route: "/#About",
+			},
+			{
+				label: "Experiencia",
+				route: "/#Experience",
+			},
+			{
+				label: "Proyectos",
+				route: "/Projects",
+			},
+			{
+				label: "Habilidades",
+				route: "/#Skills",
+			},
+			{
+				label: "Blog",
+				route: `/Blog-${language === "en" ? "es" : "en"}`,
+			},
+			{
+				label: "Contacto",
+				route: "/#Contact",
+			},
+		];
 		const LINKS = [
 			{
 				label: "Home",
@@ -101,7 +100,9 @@ function Navbar() {
 			},
 		];
 
-		setLinks(LINKS);
+		const directEsAndEN = language === "en" ? LINKS : ENLACES;
+
+		setLinks(directEsAndEN);
 	}, [language]);
 
 	return (
