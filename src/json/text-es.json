@@ -12,6 +12,13 @@
       "name": "Nombre",
       "email": "Correo electrónico",
       "message": "Mensaje"
-    }
+    },
+  "buttons": {
+    "download": "Descargar",
+    "images": "Ver imagenes",
+    "text": "Ver texto",
+    "submit": "Enviar"
+  }
+
   }
   

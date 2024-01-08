@@ -12,6 +12,12 @@
       "name": "Name",
       "email": "Email",
       "message": "Message"
+    },
+    "buttons": {
+      "download": "Download",
+      "images": "See images",
+      "text": "See text",
+      "submit": "Submit"
     }
   }
   
