@@ -46,7 +46,6 @@ function Navbar() {
 	const router = useRouter();
 
 	const pathname = usePathname();
-	console.log(pathname);
 
 	const prefix = "/Blogs/";
 
@@ -58,7 +57,6 @@ function Navbar() {
 		const newLanguage = language === "en" ? "es" : "en";
 		setLanguage(newLanguage);
 		if (pathname.includes("Blogs")) {
-			console.log("si");
 			router.push(
 				pathname === `/Blogs/${blogLanguage}-es`
 					? `/Blogs/${blogLanguage}-en`
@@ -146,11 +144,6 @@ function Navbar() {
 					data-tg-off="Off"
 					className="tgl-btn"></label>
 			</div> */}
-			<input
-				type="checkbox"
-				class="theme-checkbox"
-				onChange={handleLanguageChange}
-			/>
 
 			<div
 				className={`${
@@ -177,6 +170,14 @@ function Navbar() {
 					/>
 				))}
 			</ul>
+
+			<div className="flex justify-center items-center absolute max-lg:left-10  lg:right-10">
+				<input
+					type="checkbox"
+					className="theme-checkbox "
+					onChange={handleLanguageChange}
+				/>
+			</div>
 		</nav>
 	);
 }
