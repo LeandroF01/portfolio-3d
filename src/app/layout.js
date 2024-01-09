@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-
+import { Footer } from "./components/Footer";
 import "./globals.css";
 
 // eslint-disable-next-line react/prop-types
@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
 					<Navbar />
 				</header>
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
