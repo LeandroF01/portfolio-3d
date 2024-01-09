@@ -25,16 +25,17 @@ function Navbar() {
 	const handleLanguageChange = () => {
 		const newLanguage = language === "en" ? "es" : "en";
 		setLanguage(newLanguage);
+
 		if (pathname.includes("Blogs")) {
 			router.push(
-				pathname === `/Blogs/${blogLanguage}-es`
-					? `/Blogs/${blogLanguage}-en`
-					: `/Blogs/${blogLanguage}-es`
+				pathname === `/Blogs/${blogLanguage}-en`
+					? `/Blogs/${blogLanguage}-es`
+					: `/Blogs/${blogLanguage}-en`
 			);
 		}
 
 		if (pathname.includes("/Blog") && !pathname.includes("Blogs")) {
-			router.push(pathname === "/Blog-es" ? "/Blog-en" : "/Blog-es");
+			router.push(language === "en" ? "/Blog-es" : "/Blog-en");
 		}
 	};
 
@@ -62,7 +63,7 @@ function Navbar() {
 			},
 			{
 				label: "Blog",
-				route: `/Blog-${language === "en" ? "es" : "en"}`,
+				route: `/Blog-${language === "en" ? "en" : "es"}`,
 			},
 			{
 				label: "Contacto",
@@ -92,7 +93,7 @@ function Navbar() {
 			},
 			{
 				label: "Blog",
-				route: `/Blog-${language === "en" ? "es" : "en"}`,
+				route: `/Blog-${language === "en" ? "en" : "es"}`,
 			},
 			{
 				label: "Contact",
@@ -107,7 +108,7 @@ function Navbar() {
 
 	return (
 		<nav
-			className={`flex items-center justify-between w-full h-12 z-10 fixed  ${
+			className={`flex items-center justify-between w-full h-12 z-50 fixed  ${
 				scrolled ? "bg-navbar" : ""
 			}`}>
 			<button
