@@ -12,7 +12,8 @@
           "Migrating the March Desktop system to March Web and providing a full range of services, including item control, electronic billing, and user support."
         ]
       },
-      "images": [ "/experience/01.png", "/experience/02.png", "/experience/03.png"]
+      "images": [ "/experience/01.png", "/experience/02.png", "/experience/03.png"],
+      "logo": "/experience/logo_top.png"
     },
     {
       "titulo": "Freelancer",
@@ -28,7 +29,8 @@
           "Configured automatic reservation reminders via WhatsApp to remind users of their bookings."
         ]
       },
-      "images": [ "/experience/1.png", "/experience/2.png", "/experience/3.png", "/experience/4.png"]
+      "images": [ "/experience/1.png", "/experience/2.png", "/experience/3.png", "/experience/4.png"],
+      "logo": "/experience/freelancer.png"
     }
   ]
   

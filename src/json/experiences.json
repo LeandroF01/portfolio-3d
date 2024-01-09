@@ -15,7 +15,9 @@
           "Migración del sistema March Desktop a March Web y brindar una gama completa de servicios, incluyendo control de artículos, facturación electrónica y soporte a usuarios."
         ]
       },
-      "images": [ "/experience/01.png", "/experience/02.png", "/experience/03.png"]
+      "images": [ "/experience/01.png", "/experience/02.png", "/experience/03.png"],
+      "logo": "/experience/logo_top.png"
+
     },
     {
       "titulo": "Frelancer",
@@ -31,7 +33,8 @@
           "Configuré recordatorios automáticos de reservas a través de WhatsApp para recordar sus reservas."
         ]
       },
-      "images": [ "/experience/1.png", "/experience/2.png", "/experience/3.png", "/experience/4.png"]
+      "images": [ "/experience/1.png", "/experience/2.png", "/experience/3.png", "/experience/4.png"],
+      "logo": "/experience/freelancer.png"
     }
   ] 
   

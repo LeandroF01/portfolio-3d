@@ -20,6 +20,16 @@
 		"imageURL": "icons/astro-icon.svg"
 	},
 	{
+		"name": ".NET",
+		"color": "#631F74",
+		"imageURL": "icons/dotnet.svg"
+	},
+	{
+		"name": "Next.js",
+		"color": "#000000",
+		"imageURL": "icons/nextjs-icon.svg"
+	},
+	{
 		"name": "HTML",
 		"color": "#E56027",
 		"imageURL": "icons/html-5.svg"
@@ -33,6 +43,11 @@
 		"name": "Sass",
 		"color": "#C26191",
 		"imageURL": "icons/sass.svg"
+	},
+	{
+		"name": "Bootstrap",
+		"color": "#7E13F8",
+		"imageURL": "icons/bootstrap.svg"
 	},
 	{
 		"name": "Tailwind",
@@ -53,10 +68,6 @@
 		"name": "MySQL",
 		"color": "#005C83",
 		"imageURL": "icons/mysql.svg"
-	},
-	{
-		"name": "VB.NET",
-		"color": "#631F74",
-		"imageURL": "icons/dotnet.svg"
 	}
+	
 ]
