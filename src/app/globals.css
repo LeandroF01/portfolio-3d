@@ -293,6 +293,41 @@ body {
 	fill: #0073b2;
 }
 
+.button__github-footer {
+
+	transition: 400ms;
+}
+
+.button__github-footer svg path {
+	transition: 400ms;
+}
+
+.button__github-footer:hover {
+	background-color: transparent;
+}
+
+.button__github-footer:hover svg path {
+	fill: white ;
+}
+
+.button__linkedin-footer {
+
+	transition: 400ms;
+}
+
+.button__linkedin-footer svg path {
+	transition: 400ms;
+}
+
+.button__linkedin-footer:hover {
+	background-color: transparent;
+}
+
+.button__linkedin-footer:hover svg path {
+	fill: white ;
+}
+
+
 /* The switch - the box around the slider */
 .switch {
 	font-size: 17px;
