@@ -34,10 +34,12 @@ export default function Page() {
 				<DynamicHome />
 			</section>
 
-			<DynamicAbout />
-			<DynamicExperience />
-			<DynamicSkills />
-			<DynamicContact />
+			<section ref={targetRef}>
+				<DynamicAbout />
+				<DynamicExperience />
+				<DynamicSkills />
+				<DynamicContact />
+			</section>
 		</section>
 	);
 }

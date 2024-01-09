@@ -8,8 +8,8 @@ export default function Blog() {
 	const filteredBlogs = blogs.filter((blog) => blog.slug.endsWith("-es"));
 
 	return (
-		<section className="flex justify-center w-full">
-			<section className="flex justify-center items-center w-full h-full flex-wrap my-24 gap-6">
+		<section className="flex justify-center w-full h-full min-h-screen">
+			<section className="flex justify-center items-center w-full h-full flex-wrap mt-24 gap-6">
 				{filteredBlogs.map((post) => (
 					<article
 						key={post.slug}

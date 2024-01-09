@@ -8,7 +8,7 @@ export default function Blog() {
 	const filteredBlogs = blogs.filter((blog) => blog.slug.endsWith("-en"));
 
 	return (
-		<section className="flex justify-center w-full">
+		<section className="flex justify-center w-full h-full min-h-screen">
 			<section className="flex justify-center items-center w-full h-full flex-wrap my-24 gap-6">
 				{filteredBlogs.map((post) => (
 					<article

@@ -42,14 +42,14 @@ function About() {
 					<h2 className="my-4 font-bold text-xl">
 						{(language === "en" ? textEN : textES).about.title}
 					</h2>
-					<p className="flex flex-col gap-4 text-sm max-lg:text-xs">
+					<div className="flex flex-col gap-4 text-sm max-lg:text-xs">
 						<p className="text-text-parraf">
 							{(language === "en" ? textEN : textES).about.descripcion}
 						</p>
 						<p className="text-text-parraf">
 							{(language === "en" ? textEN : textES).about.descripcion2}
 						</p>
-					</p>
+					</div>
 				</div>
 
 				<div className="back absolute w-full h-[380px] rounded-tl-none rounded-tr-[30px] rounded-br-[40px] rounded-bl-[40px] max-lg:-top-1 top-1 skew-y-6 translate-y-6"></div>
