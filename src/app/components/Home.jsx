@@ -9,6 +9,7 @@ import useHome from "../hooks/useHome";
 import useLanguageStore from "../store/languageStore";
 import textES from "../../json/text-es.json";
 import textEN from "../../json/text-en.json";
+import Link from "next/link";
 
 function Home() {
 	const {
@@ -95,8 +96,11 @@ function Home() {
 						</a>
 					</li>
 				</ul>
-				<button
-					type="button"
+				<Link
+					href={`/cv/Front-End-Leandro-Farias-${
+						language === "en" ? "EN" : "ES"
+					}.pdf`}
+					target="_blank"
 					onClick={handleButtonClick}
 					onMouseEnter={handleMouseEnter}
 					onMouseLeave={handleMouseLeave}
@@ -115,7 +119,7 @@ function Home() {
 							</div>
 						)}
 					</span>
-				</button>
+				</Link>
 			</section>
 		</section>
 	);
